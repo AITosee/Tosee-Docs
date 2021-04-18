@@ -8,6 +8,6 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Sentry 4: 高性能第四代视觉传感器
+   :caption: Sentry: 第四代高性能视觉传感器
 
    Sentry/introduction

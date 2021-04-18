@@ -1,4 +1,4 @@
-Sentry4-Arduino 开发文档
+Sentry-Arduino 开发文档
 ========================
 
 Sentry-Arduino 库是一个专门为 Arduino 系列开发板定制打造的驱动库，
