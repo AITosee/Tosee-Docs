@@ -1,6 +1,8 @@
+[![Documentation Status](https://readthedocs.org/projects/tosee/badge/?version=latest)](https://tosee.readthedocs.io/zh/latest/?badge=latest)
+
 # Tosee-Docs
 
-Tosee documents.
+Tosee documents: https://tosee.readthedocs.io/
 
 ## Usage
 

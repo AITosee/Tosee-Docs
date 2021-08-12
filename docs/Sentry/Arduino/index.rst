@@ -105,7 +105,6 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
         同时开启过多算法会导致算法执行速度变慢，响应时间变长，部分内存较小的主控会出现内存不足而导致初始化失败的情况。
 
-
 2. 开启算法
 
     .. code-block:: cpp
@@ -154,7 +153,8 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
     .. tip::
 
-        通过重定向标准输出流到对应的串口，可以在 Arduino 上使用 ``printf`` 向对应串口打印输出字符。（该方法当前不支持浮点数打印输出）
+        通过重定向标准输出流到对应的串口，可以在 Arduino 上使用 ``printf`` 向对应串口打印输出字符。
+        （该方法当前不支持浮点数打印输出，且会占用更多内存，可能会引起内存不足等问题，不建议在非调试环境下使用）
 
         .. code-block:: cpp
             :linenos:
@@ -175,4 +175,262 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 API 说明
 --------
 
-Coming soon...
+.. cpp:enum:: sentry_vision_e
+
+    算法类型
+
+        .. cpp:enumerator::kVisionColorRecog
+
+            颜色识别算法
+
+        .. cpp:enumerator:: kVisionColorDetect
+
+            颜色检测算法
+
+        .. cpp:enumerator:: kVisionLine
+
+            线条检测算法
+
+        .. cpp:enumerator:: kVisionBody
+
+            人体检测算法
+
+        .. cpp:enumerator:: kVisionCard
+
+            卡片检测算法
+
+        .. cpp:enumerator:: kVisionFace
+
+            人脸检测算法
+
+        .. cpp:enumerator:: kVision20Classes
+
+            20 类通用物体检测算法
+
+        .. cpp:enumerator:: kVisionQrCode
+
+            二维码检测算法
+
+        .. cpp:enumerator:: kVisionObjTrack
+
+            通用物体检测算法
+
+        .. cpp:enumerator:: kVisionMotionDetect
+
+            移动物体检测算法
+
+.. cpp:enum:: sentry_obj_info_e
+
+    算法结果
+
+        .. cpp:enumerator:: kStatus
+
+            检测到目标的数量
+
+        .. cpp:enumerator:: kXValue
+
+            目标的横向坐标
+
+        .. cpp:enumerator:: kYValue
+
+            目标的纵向坐标
+
+        .. cpp:enumerator:: kWidthValue
+
+            目标宽度
+
+        .. cpp:enumerator:: kHeightValue
+
+            目标高度
+
+        .. cpp:enumerator:: kLabel
+
+            目标标签*（类别）
+
+        .. cpp:enumerator:: kRValue
+
+            目标红色通道值
+
+        .. cpp:enumerator:: kGValue
+
+            目标绿色通道值
+
+        .. cpp:enumerator:: kBValue
+
+            目标蓝色通道值
+
+.. cpp:enum:: sentry_camera_zoom_e
+
+    摄像头缩放等级
+
+        .. cpp:enumerator:: kZoomDefault
+
+            默认缩放等级
+
+        .. cpp:enumerator:: kZoom1
+        .. cpp:enumerator:: kZoom2
+        .. cpp:enumerator:: kZoom3
+        .. cpp:enumerator:: kZoom4
+        .. cpp:enumerator:: kZoom5
+
+.. cpp:enum:: sentry_camera_fps_e
+
+    摄像头帧率
+
+        .. cpp:enumerator:: kFPSNormal
+
+            摄像头普通帧率（约 25 fps）
+
+        .. cpp:enumerator:: kFPSHigh
+
+            摄像高帧率模式（约 50 fps）
+
+.. cpp:enum:: sentry_camera_white_balance_e
+
+    摄像头白平衡模式
+
+        .. cpp:enumerator:: kAutoWhiteBalance
+
+            摄像头自动白平衡
+
+        .. cpp:enumerator:: kLockWhiteBalance
+
+            摄像头锁定白平衡（将白平衡参数固定在当前数值）
+
+        .. cpp:enumerator:: kWhiteLight
+
+            摄像头白光模式
+
+        .. cpp:enumerator:: kYellowLight
+
+            摄像头黄光模式
+
+.. cpp:enum:: sentry_baudrate_e
+
+    串口波特率
+
+        .. cpp:enumerator:: kBaud9600
+        .. cpp:enumerator:: kBaud19200
+        .. cpp:enumerator:: kBaud38400
+        .. cpp:enumerator:: kBaud57600
+        .. cpp:enumerator:: kBaud115200
+        .. cpp:enumerator:: kBaud921600
+        .. cpp:enumerator:: kBaud1152000
+        .. cpp:enumerator:: kBaud2000000
+
+.. cpp:class:: Sentry
+
+    Sentry 驱动，支持 I2C/UART 两种通讯方式。
+
+    .. cpp:function:: Sentry(uint32_t address = 0x60)
+
+        Sentry 构造函数。
+
+        :param address: Sentry 地址，可选值为 ``0x60,0x61,0x62,0x63``，默认值为 ``0x60``
+
+    .. cpp:function:: uint8_t begin(HwSentryUart::hw_uart_t communication_port)
+
+        使用串口模式初始化 Sentry。
+
+        :param communication_port: 串口号
+        :return: 错误码，返回 ``SENTRY_OK``，则初始化成功，其他，则初始化失败
+
+    .. cpp:function:: uint8_t begin(HwSentryI2C::hw_i2c_t* communication_port)
+
+        使用 I2C 模式初始化 Sentry。
+
+        :param communication_port: I2C 端口号
+        :return: 错误码，返回 ``SENTRY_OK``，则初始化成功，其他，则初始化失败
+
+    .. cpp:function:: uint8_t VisionBegin(sentry_vision_e vision_type)
+
+        开启对应算法
+
+        :param vision_type: 算法类型
+        :return: 错误码，返回 ``SENTRY_OK``，则初始化成功，其他，则开启失败
+
+    .. cpp:function:: uint8_t VisionEnd(sentry_vision_e vision_type)
+
+        关闭对应算法
+
+        :param vision_type: 算法类型
+        :return: 错误码，返回 ``SENTRY_OK``，则关闭成功，其他，则关闭失败
+
+    .. cpp:function:: int GetValue(sentry_vision_e vision_type, sentry_obj_info_e obj_info, int obj_id = 0)
+
+        读取对应算法的结果
+
+        :param vision_type: 算法类型
+        :param obj_info: 结果类型
+        :param obj_id: 结果 ID，默认为 ``0``
+        :return: 对应结果的值
+
+    .. cpp:function:: char* GetQrCodeValue()
+
+        读取二维码识别结果
+
+        :return: 二维码识别到的字符串
+
+    .. cpp:function:: uint8_t SetParamNum(sentry_vision_e vision_type, int max_num)
+
+        设置单次检测最大返回结果的数量
+
+        :param vision_type: 算法类型
+        :param max_num: 检测结果数量
+        :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
+
+    .. cpp:function:: uint8_t SetParam(sentry_vision_e vision_type, sentry_object_t* param, int param_id)
+
+        设置检测参数
+
+        :param vision_type: 算法类型
+        :param param: 检测结果参数及对应的值
+        :param param_id: 参数 ID
+        :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
+
+    .. cpp:function:: uint8_t CameraSetZoom(sentry_camera_zoom_e zoom)
+
+        设置摄像头缩放等级
+
+        :param zoom: 缩放等级
+        :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
+
+    .. cpp:function:: uint8_t CameraSetRotate(bool enable)
+
+        设置摄像头图像旋转
+
+        :param enable: ``true``：图像旋转 180°
+        :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
+
+    .. cpp:function:: uint8_t CameraSetFPS(sentry_camera_fps_e fps)
+
+        设置摄像头帧率
+
+        :param fps: 摄像头帧率
+        :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
+
+    .. cpp:function:: uint8_t CameraSetAwb(sentry_camera_white_balance_e awb)
+
+        设置摄像头白平衡
+
+        :param awb: 摄像头白平衡模型
+        :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
+
+    .. cpp:function:: uint8_t UartSetBaudrate(sentry_baudrate_e baud)
+
+        设置串口波特率
+
+        :param baud: 串口波特率
+        :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
+
+    .. cpp:function:: int rows()
+
+        获取图像实际宽度
+
+        :return: 图像宽度
+
+    .. cpp:function:: int cols()
+
+        获取图像实际高度
+
+        :return: 图像高度
