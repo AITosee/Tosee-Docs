@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-欢迎来到瞳芯智能文档中心：D
+欢迎来到瞳芯智能文档中心:D
 ===============================
 
 .. toctree::
