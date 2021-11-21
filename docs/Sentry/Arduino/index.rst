@@ -1,7 +1,7 @@
 Sentry-Arduino 开发文档
 ========================
 
-Sentry-Arduino 库是一个专门为 Arduino 系列开发板定制打造的驱动库，
+Sentry-Arduino 库是一个专门为 Arduino 系列开发板定制打造的驱动库，适用于 Sentry 全系列产品，
 用户可以使用该库迅速上手获取 Sentry 的识别结果，以及设置相关参数。
 
 安装
@@ -62,6 +62,9 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
             #include <Arduino.h>
             #include <Sentry.h>
 
+            /* 定义 Sentry 型号，此处使用了 Sentry2 作为例子 */
+            typedef Sentry2 Sentry;
+
             /* 实例化 Sentry，创建 Sentry 变量 */
             Sentry sentry;
 
@@ -87,6 +90,9 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
             #include <Sentry.h>
             #include <Wire.h>
 
+            /* 定义 Sentry 型号，此处使用了 Sentry2 作为例子 */
+            typedef Sentry2 Sentry;
+
             /* 实例化 Sentry，创建 Sentry 变量 */
             Sentry sentry;
 
@@ -111,11 +117,11 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
         :linenos:
 
         /* 开启卡片检测算法 */
-        err = sentry.VisionBegin(kVisionCard);
+        err = sentry.VisionBegin(Sentry::kVisionCard);
 
     .. note::
 
-        当前支持的算法包括：
+        当前 ``Sentry2`` 支持的算法包括：
 
         ============    ===========
         颜色识别        kVisionColorRecog
@@ -135,17 +141,17 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
         void loop() {
             unsigned long ts = millis();
             /* 获取算法识别到目标的数量 */
-            int obj_num = sentry.GetValue(kVisionCard, kStatus);
+            int obj_num = sentry.GetValue(Sentry::kVisionCard, kStatus);
             unsigned long te = millis();
             if (obj_num) {
                 printf("Totally %d objects in %lums:\n", obj_num, te - ts);
                 /* 打印算法所有识别到物体的位置和标签 */
                 for (int i = 0; i < obj_num; ++i) {
-                    int x = sentry.GetValue(kVisionCard, kXValue, i);
-                    int y = sentry.GetValue(kVisionCard, kYValue, i);
-                    int w = sentry.GetValue(kVisionCard, kWidthValue, i);
-                    int h = sentry.GetValue(kVisionCard, kHeightValue, i);
-                    int l = sentry.GetValue(kVisionCard, kLabel, i);
+                    int x = sentry.GetValue(Sentry::kVisionCard, kXValue, i);
+                    int y = sentry.GetValue(Sentry::kVisionCard, kYValue, i);
+                    int w = sentry.GetValue(Sentry::kVisionCard, kWidthValue, i);
+                    int h = sentry.GetValue(Sentry::kVisionCard, kHeightValue, i);
+                    int l = sentry.GetValue(Sentry::kVisionCard, kLabel, i);
                     printf("  obj[%d]: x=%d,y=%d,w=%d,h=%d, label=%s\n", i, x, y, w, h, l);
                 }
             }
@@ -174,50 +180,6 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
 API 说明
 --------
-
-.. cpp:enum:: sentry_vision_e
-
-    算法类型
-
-        .. cpp:enumerator::kVisionColorRecog
-
-            颜色识别算法
-
-        .. cpp:enumerator:: kVisionColorDetect
-
-            颜色检测算法
-
-        .. cpp:enumerator:: kVisionLine
-
-            线条检测算法
-
-        .. cpp:enumerator:: kVisionBody
-
-            人体检测算法
-
-        .. cpp:enumerator:: kVisionCard
-
-            卡片检测算法
-
-        .. cpp:enumerator:: kVisionFace
-
-            人脸检测算法
-
-        .. cpp:enumerator:: kVision20Classes
-
-            20 类通用物体检测算法
-
-        .. cpp:enumerator:: kVisionQrCode
-
-            二维码检测算法
-
-        .. cpp:enumerator:: kVisionObjTrack
-
-            通用物体检测算法
-
-        .. cpp:enumerator:: kVisionMotionDetect
-
-            移动物体检测算法
 
 .. cpp:enum:: sentry_obj_info_e
 
@@ -318,9 +280,53 @@ API 说明
         .. cpp:enumerator:: kBaud1152000
         .. cpp:enumerator:: kBaud2000000
 
-.. cpp:class:: Sentry
+.. cpp:class:: Sentry2
 
     Sentry 驱动，支持 I2C/UART 两种通讯方式。
+
+    .. cpp:enum:: sentry_vision_e
+
+        算法类型
+
+            .. cpp:enumerator::kVisionColorRecog
+
+                颜色识别算法
+
+            .. cpp:enumerator:: kVisionColorDetect
+
+                颜色检测算法
+
+            .. cpp:enumerator:: kVisionLine
+
+                线条检测算法
+
+            .. cpp:enumerator:: kVisionBody
+
+                人体检测算法
+
+            .. cpp:enumerator:: kVisionCard
+
+                卡片检测算法
+
+            .. cpp:enumerator:: kVisionFace
+
+                人脸检测算法
+
+            .. cpp:enumerator:: kVision20Classes
+
+                20 类通用物体检测算法
+
+            .. cpp:enumerator:: kVisionQrCode
+
+                二维码检测算法
+
+            .. cpp:enumerator:: kVisionObjTrack
+
+                通用物体检测算法
+
+            .. cpp:enumerator:: kVisionMotionDetect
+
+                移动物体检测算法
 
     .. cpp:function:: Sentry(uint32_t address = 0x60)
 
