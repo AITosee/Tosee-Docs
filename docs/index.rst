@@ -11,3 +11,4 @@
    :caption: Sentry2: 第二代高性能视觉传感器
 
    Sentry/introduction
+   contributing

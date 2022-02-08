@@ -36,9 +36,25 @@ Sentry-小哨兵视觉传感器是瞳芯智能开发的新一代高性能视觉�
     Vision/index
 
 Sentry-Arduino 开发文档
---------------------------
+-----------------------
 
 .. toctree::
     :maxdepth: 2
 
     Arduino/index
+
+Sentry-Mind+ 开发文档
+---------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    MindPlus/index
+
+Sentry-MakeCode 开发文档
+------------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    MakeCode/index
