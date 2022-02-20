@@ -12,6 +12,25 @@ Sentry-Mind+ 开发文档
 3. 点击右下角齿轮图标，并点击 ``用户库``。
 4. 在搜索栏输入 ``https://github.com/AITosee/ext-sentry``，并点击添加。
 
+例程
+----
+
+1. 20类卡片识别
+
+    .. image:: images/mindplus_sentry_example_20class.png
+
+2. 颜色识别
+
+    .. image:: images/mindplus_sentry_example_color.png
+
+3. 二维码检测
+
+    .. image:: images/mindplus_sentry_example_qrcode.png
+
+4. 色块检测
+
+    .. image:: images/mindplus_sentry_example_blob.png
+
 模块说明
 --------
 
