@@ -7,4 +7,4 @@ setuptools
 sphinx==2.1
 sphinx-book-theme==0.0.42
 readthedocs-sphinx-search==0.1.0rc3
-Jinja==2.11.2
+Jinja>=2.11
