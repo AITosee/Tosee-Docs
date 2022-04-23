@@ -43,6 +43,14 @@ Sentry-Arduino 开发文档
 
     Arduino/index
 
+Sentry-Mixly 开发文档
+---------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    Mixly/index
+
 Sentry-Mind+ 开发文档
 ---------------------
 

@@ -77,7 +77,7 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
         .. attention::
 
-            Arduino 部分型号（如：UNO）至含有一个硬件串口，该类主控上建议使用 `软串口 <https://www.arduino.cc/en/Reference/SoftwareSerialConstructor>`_。
+            Arduino 部分型号（如：UNO）至含有一个硬件串口，该类主控上建议使用 `软串口 <https://docs.arduino.cc/learn/built-in-libraries/software-serial>`_。
 
 
     - I2C
@@ -440,3 +440,50 @@ API 说明
         获取图像实际高度
 
         :return: 图像高度
+
+FAQ
+---
+
+1. 编译例程提示： ``error: 'Serial3' was not declared in this scope``
+
+    某些 Arduino 硬件（如 `UNO R3 <https://store.arduino.cc/products/arduino-uno-rev3>`_ 等）
+    只有一个硬件串口，此硬件串口一般留与电脑等上位机通讯打印调试信息，所以此时需要使用其他硬件串口或
+    `软串口 <https://docs.arduino.cc/learn/built-in-libraries/software-serial>`_
+
+    .. note::
+
+        软串口使用例程：
+
+        .. code-block:: cpp
+            :linenos:
+
+            #include <SoftwareSerial.h>
+            #include <Sentry.h>
+
+            // 此处定义软串口的 TX 和 RX 引脚
+            #define rxPin 10
+            #define txPin 11
+
+            SoftwareSerial mySerial =  SoftwareSerial(rxPin, txPin);
+
+            typedef Sentry2 Sentry;
+            Sentry sentry;
+
+            void setup()  {
+                // Define pin modes for TX and RX
+                pinMode(rxPin, INPUT);
+                pinMode(txPin, OUTPUT);
+
+                // 此处使用软串口 mySerial 代替 Serial3 即可
+                mySerial.begin(9600);
+                while (SENTRY_OK != sentry.begin(&mySerial)) { yield(); }
+            }
+
+2. Arduino 串口监视器上打印乱码
+
+    首先确认下是否使用了串口，其次确认下代码中及连线是否使用了默认硬件串口
+    ``Serial``，在 Arduino 中，硬件串口 ``Serial`` 被用于与电脑通讯，
+    如果与 Sentry 连接并且打开串口监视器会将二者的通讯内容打印至电脑串口监视器，
+    从而显示乱码，请使用其他硬件串口或
+    `软串口 <https://docs.arduino.cc/learn/built-in-libraries/software-serial>`_
+    代替默认串口 ``Serial`` 与 Sentry 通讯。
