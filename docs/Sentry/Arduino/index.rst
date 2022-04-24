@@ -30,6 +30,7 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
     +---------+--------+
 
     .. attention::
+
         Arduino Uno 只有一个硬件串口（用于传输打印信息至电脑端），建议使用软串口与 Sentry 进行通讯。
 
 2. 设置 Sentry 的通讯模式
@@ -176,6 +177,15 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
                 Serial.begin(9600);
                 fdevopen(&serial_putc, 0);
             }
+
+4. 开启 WiFi
+
+    WiFi 的启动与关闭可通过 ``WiFiConfig`` 函数进行控制。
+
+    .. code-block:: cpp
+        :linenos:
+
+        sentry.WiFiConfig(true, kWiFiBaud1152000);
 
 
 API 说明
