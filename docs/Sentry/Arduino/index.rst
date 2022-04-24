@@ -127,12 +127,17 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
         ============    ===========
         颜色识别        kVisionColorRecog
         色块检测        kVisionColorDetect
+        AprilTag        kVisionAprilTag
         线条检测        kVisionLine
+        深度学习        kVisionLearning
         卡片检测        kVisionCard
         人脸检测        kVisionFace
         20类物体检测    kVision20Classes
         二维码识别      kVisionQrCode
+        移动物体检测    kVisionMotionDetect
         ============    ===========
+
+        算法具体介绍可见： :doc:`../Vision/index`
 
 3. 获取算法识别结果
 
@@ -187,6 +192,27 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
         sentry.WiFiConfig(true, kWiFiBaud1152000);
 
+5. 截屏
+
+    截屏后可选择将图片保存于 ``SD卡``，或通过 ``USB/UART/WiFi`` 发送至其他设备。
+
+    - `完整例程 <https://github.com/AITosee/Sentry-Arduino/blob/main/examples/ScreenSnapshot/ScreenSnapshot.ino>`_
+
+    .. code-block:: cpp
+        :linenos:
+
+        #define SNAPSHOT_TO_SD_CARD false
+        #define SNAPSHOT_TO_UART false
+        #define SNAPSHOT_TO_USB false
+        #define SNAPSHOT_TO_WIFI true
+        #define SNAPSHOT_FROM_SCREEN false
+
+        sentry.Snapshot(SNAPSHOT_TO_SD_CARD, SNAPSHOT_TO_UART, SNAPSHOT_TO_USB,
+                        SNAPSHOT_TO_WIFI, SNAPSHOT_FROM_SCREEN);
+
+    .. attention::
+
+        想要通过 ``USB/UART/WiFi`` 发送至其他设备前需要手动先开启对应的 ``USB/UART/WiFi`` 设备哦！
 
 API 说明
 --------
