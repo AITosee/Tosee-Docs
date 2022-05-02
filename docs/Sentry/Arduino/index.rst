@@ -65,8 +65,8 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
             /* 定义 Sentry 型号，此处使用了 Sentry2 作为例子 */
             typedef Sentry2 Sentry;
 
-            /* 实例化 Sentry，创建 Sentry 变量 */
-            Sentry sentry;
+            /* 实例化 Sentry，创建 Sentry 变量，并指定 Sentry 地址为 0x60 */
+            Sentry sentry(0x60);
 
             void setup() {
                 /* 设置 Arduino(mega2560) 串口3波特率与 Sentry 一致 */
@@ -93,8 +93,8 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
             /* 定义 Sentry 型号，此处使用了 Sentry2 作为例子 */
             typedef Sentry2 Sentry;
 
-            /* 实例化 Sentry，创建 Sentry 变量 */
-            Sentry sentry;
+            /* 实例化 Sentry，创建 Sentry 变量，并指定 Sentry 地址为 0x60 */
+            Sentry sentry(0x60);
 
             void setup() {
                 Wire.begin();
@@ -104,8 +104,9 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
     .. note::
 
-        若初始化返回错误码为 ``0xXX``，则表示库过旧，部分功能可能不支持，请更新至最新版本库；
+        1. 若初始化返回错误码为 ``0x03``，则表示库过旧，部分功能可能不支持，请更新至最新版本库；
         若返回其他类型错误，则表示通讯异常，请检查 Sentry 接线与模式是否与代码中的一致。
+        2. 实例化 Sentry 时地址可以设置为任意值，需与 Sentry 设备显示的地址一致，地址默认值为 0x60。
 
     .. warning::
 
@@ -121,16 +122,19 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
     .. note::
 
-        当前 ``Sentry2`` 支持的算法包括：
+        当前 ``Sentry2`` 支持的 :doc:`算法 <../Vision/index>` 包括：
 
         ============    ===========
-        颜色识别        kVisionColorRecog
-        色块检测        kVisionColorDetect
+        颜色识别        kVisionColor
+        色块检测        kVisionBlob
+        AprilTag        kVisionAprilTag
         线条检测        kVisionLine
+        深度学习        kVisionLearning
         卡片检测        kVisionCard
         人脸检测        kVisionFace
         20类物体检测    kVision20Classes
         二维码识别      kVisionQrCode
+        移动物体侦测    kVisionMotionDetect
         ============    ===========
 
 3. 获取算法识别结果
@@ -177,6 +181,33 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
                 fdevopen(&serial_putc, 0);
             }
 
+例程
+----
+
+所有例程在 Arduino 库中 ``examples/`` 文件夹下，可通过点击 Arduino IDE 上方
+``文件→例程→Sentry`` 找到对应算法的相关调用例程。
+
+.. image:: images/arduino_sentry_examples.png
+    :scale: 50 %
+    :align: center
+
+.. note::
+
+    可通过开启或关闭例程中 I2C 和 UART 的相关宏定义来选择串口通讯模式或 I2C 通讯模式：
+
+    .. code-block:: cpp
+        :linenos:
+
+        /* 打开 SENTRY_UART 宏，关闭 SENTRY_I2C 即表示为串口通讯模式 */
+        // #define SENTRY_I2C
+        #define SENTRY_UART
+
+    .. code-block:: cpp
+        :linenos:
+
+        /* 打开 SENTRY_I2C 宏，关闭 SENTRY_UART 即表示为 I2C 通讯模式 */
+        #define SENTRY_I2C
+        // #define SENTRY_UART
 
 API 说明
 --------
@@ -288,21 +319,25 @@ API 说明
 
         算法类型
 
-            .. cpp:enumerator::kVisionColorRecog
+            .. cpp:enumerator::kVisionColor
 
                 颜色识别算法
 
-            .. cpp:enumerator:: kVisionColorDetect
+            .. cpp:enumerator:: kVisionBlob
 
                 颜色检测算法
+
+            .. cpp:enumerator:: kVisionAprilTag
+
+                AprilTag 算法
 
             .. cpp:enumerator:: kVisionLine
 
                 线条检测算法
 
-            .. cpp:enumerator:: kVisionBody
+            .. cpp:enumerator:: kVisionLearning
 
-                人体检测算法
+                深度学习算法
 
             .. cpp:enumerator:: kVisionCard
 
@@ -319,10 +354,6 @@ API 说明
             .. cpp:enumerator:: kVisionQrCode
 
                 二维码检测算法
-
-            .. cpp:enumerator:: kVisionObjTrack
-
-                通用物体检测算法
 
             .. cpp:enumerator:: kVisionMotionDetect
 
