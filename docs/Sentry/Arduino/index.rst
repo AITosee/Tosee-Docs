@@ -30,6 +30,7 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
     +---------+--------+
 
     .. attention::
+
         Arduino Uno 只有一个硬件串口（用于传输打印信息至电脑端），建议使用软串口与 Sentry 进行通讯。
 
 2. 设置 Sentry 的通讯模式
@@ -122,7 +123,7 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
     .. note::
 
-        当前 ``Sentry2`` 支持的 :doc:`算法 <../Vision/index>` 包括：
+        当前 ``Sentry2`` 支持的算法包括：
 
         ============    ===========
         颜色识别        kVisionColor
@@ -134,8 +135,10 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
         人脸检测        kVisionFace
         20类物体检测    kVision20Classes
         二维码识别      kVisionQrCode
-        移动物体侦测    kVisionMotionDetect
+        运动物体        kVisionMotionDetect
         ============    ===========
+
+        算法具体介绍可见： :doc:`../Vision/index`
 
 3. 获取算法识别结果
 
@@ -180,6 +183,37 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
                 Serial.begin(9600);
                 fdevopen(&serial_putc, 0);
             }
+
+4. 开启 WiFi
+
+    WiFi 的启动与关闭可通过 ``WiFiConfig`` 函数进行控制。
+
+    .. code-block:: cpp
+        :linenos:
+
+        sentry.WiFiConfig(true, kWiFiBaud1152000);
+
+5. 截屏
+
+    截屏后可选择将图片保存于 ``SD卡``，或通过 ``USB/UART/WiFi`` 发送至其他设备。
+
+    - `完整例程 <https://github.com/AITosee/Sentry-Arduino/blob/main/examples/ScreenSnapshot/ScreenSnapshot.ino>`_
+
+    .. code-block:: cpp
+        :linenos:
+
+        #define SNAPSHOT_TO_SD_CARD false
+        #define SNAPSHOT_TO_UART false
+        #define SNAPSHOT_TO_USB false
+        #define SNAPSHOT_TO_WIFI true
+        #define SNAPSHOT_FROM_SCREEN false
+
+        sentry.Snapshot(SNAPSHOT_TO_SD_CARD, SNAPSHOT_TO_UART, SNAPSHOT_TO_USB,
+                        SNAPSHOT_TO_WIFI, SNAPSHOT_FROM_SCREEN);
+
+    .. attention::
+
+        想要通过 ``USB/UART/WiFi`` 发送至其他设备前需要手动先开启对应的 ``USB/UART/WiFi`` 设备哦！
 
 例程
 ----
