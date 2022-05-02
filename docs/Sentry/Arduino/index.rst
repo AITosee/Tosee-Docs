@@ -78,7 +78,7 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
         .. attention::
 
-            Arduino 部分型号（如：UNO）至含有一个硬件串口，该类主控上建议使用 `软串口 <https://docs.arduino.cc/learn/built-in-libraries/software-serial>`_。
+            Arduino 部分型号（如：UNO）只有一个硬件串口，该类主控上建议使用 `软串口 <https://docs.arduino.cc/learn/built-in-libraries/software-serial>`_。
 
 
     - I2C
