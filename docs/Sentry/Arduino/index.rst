@@ -353,45 +353,45 @@ API 说明
 
         算法类型
 
-        .. cpp:enumerator:: kVisionColor
+            .. cpp:enumerator:: kVisionColor
 
-            颜色识别算法
+                颜色识别算法
 
-        .. cpp:enumerator:: kVisionBlob
+            .. cpp:enumerator:: kVisionBlob
 
-            颜色检测算法
+                颜色检测算法
 
-        .. cpp:enumerator:: kVisionAprilTag
+            .. cpp:enumerator:: kVisionAprilTag
 
-            AprilTag 算法
+                AprilTag 算法
 
-        .. cpp:enumerator:: kVisionLine
+            .. cpp:enumerator:: kVisionLine
 
-            线条检测算法
+                线条检测算法
 
-        .. cpp:enumerator:: kVisionLearning
+            .. cpp:enumerator:: kVisionLearning
 
-            深度学习算法
+                深度学习算法
 
-        .. cpp:enumerator:: kVisionCard
+            .. cpp:enumerator:: kVisionCard
 
-            卡片检测算法
+                卡片检测算法
 
-        .. cpp:enumerator:: kVisionFace
+            .. cpp:enumerator:: kVisionFace
 
-            人脸检测算法
+                人脸检测算法
 
-        .. cpp:enumerator:: kVision20Classes
+            .. cpp:enumerator:: kVision20Classes
 
-            20 类通用物体检测算法
+                20 类通用物体检测算法
 
-        .. cpp:enumerator:: kVisionQrCode
+            .. cpp:enumerator:: kVisionQrCode
 
-            二维码检测算法
+                二维码检测算法
 
-        .. cpp:enumerator:: kVisionMotionDetect
+            .. cpp:enumerator:: kVisionMotionDetect
 
-            移动物体检测算法
+                移动物体检测算法
 
     .. cpp:function:: Sentry(uint32_t address = 0x60)
 
