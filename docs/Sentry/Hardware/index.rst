@@ -89,17 +89,6 @@ Mind+               图形化，C/C++，MicroPython           Arduino、Micro:bi
 Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly               支持                支持
 ================    ================================    ================================    ================================================    ================    ================
 
-固件更新
-----------------
-
-Sentry2支持固件更新，固件下载地址：
-
-链接：https://pan.baidu.com/s/1HlYivYUUBt0ubTfRAchfMQ?pwd=ijxp 
-
-提取码：ijxp
-
-*注意区分消费版和企业版固件，如有异常，请联系 support@aitosee.com*
-
 使用说明
 ----------------
 Sentry2视觉传感器可以通过通讯接口与主控制器相连接，也可以通过USB与电脑连接。通讯接口可以在UI界面中配置为UART串口或I2C模式，还可以修改设备地址和波特率等参数。

@@ -1,26 +1,19 @@
 Sentry2
 =======
 
-感谢选择 *Sentry* 系列视觉传感器，Sentry2 为该系列的第二代高性能视觉传感器，支持 **人脸识别/色块检测/颜色识别/线条检测**
-等多种离线视觉算法。
+感谢选择 **Sentry2** 视觉传感器 :D
 
 快速上手
---------
+------------------------
 
-1. 将 Sentry 通过 USB 连接至 5V 电源。
-2. 向右拨动背面右上角拨杆一次进入设置模式。
+.. image:: images/sentry2_run_vision_by_stick.png
 
-    .. image:: images/sentry_set_vision.jpg
-
-3. 向内按压拨杆选择任意算法，将状态由红色的 ``STOP`` 设置成绿色的 ``RUN``。
-
-    .. image:: images/sentry_vision_run.jpg
-
-4. 向左拨动拨杆，退出设置模式。
-5. 将 Sentry 摄像头面向需要识别的物体，即可看到识别情况。
+1. 将 Sentry2 通过 USB 连接至电脑
+2. 上下拨动导航键即可快速切换算法
+3. 将 Sentry2 摄像头面向需要识别的物体，即可看到识别情况
 
 硬件介绍
---------
+------------------------
 
 .. toctree::
     :maxdepth: 2
@@ -28,7 +21,7 @@ Sentry2
     Hardware/index
 
 算法介绍
---------
+------------------------
 
 .. toctree::
     :maxdepth: 2
@@ -36,7 +29,7 @@ Sentry2
     Vision/index
 
 Sentry-Arduino 开发文档
------------------------
+------------------------
 
 .. toctree::
     :maxdepth: 2
@@ -44,7 +37,7 @@ Sentry-Arduino 开发文档
     Arduino/index
 
 Sentry-Mixly 开发文档
----------------------
+------------------------
 
 .. toctree::
     :maxdepth: 2
@@ -52,7 +45,7 @@ Sentry-Mixly 开发文档
     Mixly/index
 
 Sentry-Mind+ 开发文档
----------------------
+------------------------
 
 .. toctree::
     :maxdepth: 2
@@ -74,3 +67,12 @@ Sentry-MakeCode 开发文档
     :maxdepth: 2
 
     Demo/index
+
+资源下载
+------------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    Download/index
+
