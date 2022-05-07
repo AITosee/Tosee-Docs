@@ -9,12 +9,12 @@ Sentry2驱动库
 ----------------
 
 ================    ================================    ================================    ================================================   
-开发平台              编程语言                             主控设备                            驱动库链接                                             
+开发平台              编程语言                             主控设备                             驱动库链接                                             
 ================    ================================    ================================    ================================================    
-Arduino             C/C++                                Arduino                            https://github.com/AITosee/Sentry-Arduino 
-MakeCode            图形化                               Micro:bit                           https://github.com/AITosee/pxt-sentry 
-Mind+               图形化，C/C++，MicroPython           Arduino、Micro:bit、掌控板             https://github.com/AITosee/ext-sentry 
-Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly 
+Arduino             C/C++                                Arduino                            https://github.com/AITosee/Sentry-Arduino/releases
+MakeCode            图形化                               Micro:bit                           https://github.com/AITosee/pxt-sentry/releases
+Mind+               图形化，C/C++，MicroPython           Arduino、Micro:bit、掌控板             https://github.com/AITosee/ext-sentry/releases
+Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly/releases
 ================    ================================    ================================    ================================================ 
 
 

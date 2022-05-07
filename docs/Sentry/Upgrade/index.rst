@@ -11,7 +11,7 @@
 ------------
 
 1. 安装USB驱动
-    安装USB驱动工具，如果电脑可以识别设备，则可以不用安装 :download:`点击下载 <http://www.wch.cn/downloads/file/315.html?time=2022-05-07%2016:08:41&code=9Nh29r7jiQsj7QDu5IffgdrpzpKC0igITm3n3zuj>`
+    安装USB驱动工具，如果电脑可以识别设备，则可以不用安装 :download:`点击下载驱动文件 <http://www.wch.cn/downloads/file/315.html?time=2022-05-07%2016:08:41&code=9Nh29r7jiQsj7QDu5IffgdrpzpKC0igITm3n3zuj>`
 
 2. 连接设备
 
@@ -25,7 +25,7 @@
 
 4. 下载固件
 
-    点击“下载”后将会出现下图所示界面，此时 **向下压按视觉传感器的摇杆键约 2 秒** 来启动下载并等待下载完成.
+    点击“下载”后将会出现下图所示界面，此时 **垂直压按视觉传感器的摇杆键约 2 秒** 来启动下载并等待下载完成.
 
     .. image:: images/sentry_upgrade_press_key.png
         :scale: 50 %
