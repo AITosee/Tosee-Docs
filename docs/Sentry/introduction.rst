@@ -68,6 +68,14 @@ Sentry-MakeCode 开发文档
 
     Demo/index
 
+固件升级教程
+------------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    Upgrade/index
+
 资源下载
 ------------------------
 
