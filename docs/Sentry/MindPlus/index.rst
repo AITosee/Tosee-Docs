@@ -1,3 +1,5 @@
+.. _chapter_mindplus_index:
+
 Sentry-Mind+ 开发文档
 =====================
 

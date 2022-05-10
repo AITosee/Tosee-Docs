@@ -1,3 +1,5 @@
+.. _chapter_arduino_index:
+
 Sentry-Arduino 开发文档
 =======================
 

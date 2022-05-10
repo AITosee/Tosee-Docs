@@ -1,3 +1,5 @@
+.. _chapter_mixly_index:
+
 Sentry-Mixly 开发文档
 =====================
 

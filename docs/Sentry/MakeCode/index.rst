@@ -1,3 +1,5 @@
+.. _chapter_makecode_index:
+
 Sentry-MakeCode 开发文档
 ========================
 
