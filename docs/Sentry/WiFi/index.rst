@@ -8,27 +8,165 @@ Sentry2视觉传感器板载ESP8285-WiFi芯片，可以直接通过Arduino进行
 
 
 
-使用说明
+开发环境搭建
 ----------------
-Sentry2视觉传感器可以通过通讯接口与主控制器相连接，也可以通过USB与电脑连接。通讯接口可以在UI界面中配置为UART串口或I2C模式，还可以修改设备地址和波特率等参数。
-**注意：USB与通讯接口不可以同时供电！！！**
 
-连接主控
+添加ESP8266开发板
 ************************
 
-接口定义
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+使用Sentry2的WiFi功能，首先需要下载并安装Arduino IDE程序：
 
-================    ================    ================    ================
-引脚序号              UART模式            I2C模式              备注
-================    ================    ================    ================
-1                   RX                  SDA
-2                   TX                  SCL
-3                   GND                 GND
-4                   VCC                 VCC                 注意！！！当插入USB时，此端口可以对外部设备进行供电，此端口不可直接连接电池，当插入USB时不可接入3.3V系统，需要断开供电引脚
-================    ================    ================    ================
+https://downloads.arduino.cc/arduino-1.8.19-windows.exe
 
-:download:`引用非rst的本地文档 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_1_5c_20220425_e.kfpkg>`.
+启动Arduino程序，打开“文件”>“首选项”
+
+.. image:: images/esp8285_setup_01.png
 
 
+在“附加开发板管理器网址”中填入以下网址，点击“好”保存设置
 
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+.. image:: images/esp8285_setup_02.png
+
+
+打开“工具”>“开发板”>“开发板管理器”
+
+.. image:: images/esp8285_setup_03.png
+
+
+弹出“开发板管理器界面”，在搜索栏中输入“esp8266”并回车，可以得到如下图所示的搜索结果，选择最新的版本并点击“安装”，等待下载和安装完成后再关闭此页面
+	
+*注：下载过程可能会比较慢*
+
+.. image:: images/esp8285_setup_04.png
+
+
+简单的测试
+************************
+
+打开“工具”>“开发板”>“ESP8266”>”Generic ESP8285 Module”，Aarduino将切换为ESP8285的开发板
+
+.. image:: images/esp8285_setup_05.png
+
+
+加载LED Blink（闪烁）示例程序：依次打开“文件”>“示例”>“ESP8266”>“Blink”
+
+.. image:: images/esp8285_setup_06.png
+
+
+此时，将Sentry2视觉传感器通过USB-TypeC接入电脑，打开“工具”菜单，并按照下述内容进行硬件配置，需要修改的几个项目有
+
+Buildin Led：“4” （内置LED的IO口端号）
+
+CPU Frequency：“80MHz”（可以根据需要设为80MHz或160MHz）
+
+Upload Speed：“57600”	（烧录时采用的波特率，只可设为此值）
+
+Reset Method：“no dtr (aka ck)”（烧录时硬件复位模式，只可设为此值）
+
+选择端口：“COM xx”（选择实际使用的USB端口）
+
+.. image:: images/esp8285_setup_07.png
+
+
+向下拨动导航键不要松开（注意：不是垂直压按），点击“上传”按键开始编译和上传固件，当出现“xx%”的进度显示后，便可以松开导航键
+
+.. image:: images/esp8285_setup_08.png
+
+
+.. image:: images/esp8285_setup_09.png
+
+
+等待固件上传成功，固件烧录至100%状态
+
+.. image:: images/esp8285_setup_10.png
+
+
+固件烧录完后重启传感器，向上拨动导航键进入“自定义”算法，屏幕上方左侧蓝色LED灯变为常亮
+
+.. image:: images/esp8285_setup_11.png
+
+
+观察屏幕上方内侧右边的蓝色LED的灯光变化，现象应与程序中的一致：LED亮2秒，熄灭1秒，往复如此，则表明固件烧录成功
+
+.. image:: images/esp8285_setup_12.png
+
+异常问题
+************************
+
+如果现象与上述不符，可能原因如下：
+
+1. 所烧录的示例程序内容是否一致，检查程序代码
+
+2. 固件编译失败，检查是否成功加载了ESP8285的开发板
+
+3. 固件烧录失败，比如烧录过程中断，检查通讯线，波特率和端口号，或者导航键操作不正确
+
+4. 硬件配置不正确，比如没有指定LED端口号，仔细检查Arduino的硬件配置
+
+5. 没有进入“自定义”算法模式，需要开启此模式才可以启动WiFi芯片，此模式需要Sentry2升级到V2.1以上的固件版本才支持，可以在UI界面上方滚动条中查看固件版本
+
+6. 其他现象或问题，请联系我们予以解决
+
+
+示例程序
+----------------
+
+提供部分开源的WiFi程序，请点击下载使用，程序内部有详细的备注说明，请仔细阅读并使用
+
+*注意：示例程序中所涉及的第三方云平台可能需要进行注册或付费使用，请仔细阅读相关的使用条款*
+
+*注意：本示例程序仅作为WiFi功能的使用参考，并不对第三方平台的识别性能、安全性、可用性等提供保障*
+
+
+巴法云-图床
+************************
+
+本示例用于实现图片上传至巴法云的图床，可以通过手机微信查看图片，也可以由第三方云端识图调用该图片地址
+
+**注意：巴法云和百度云部分项目为收费或限制免费使用次数，请仔细阅读其官方文档和使用条款！！！！！！！！！！**
+
+:download:`Arduino程序下载： sentry2_esp8285_bemfa_image_transfer.zip <demo/sentry2_esp8285_bemfa_image_transfer.zip>`
+
+.. image:: images/demo_pic_bemfa_01.png
+
+
+百度云-果蔬识别
+************************
+
+本示例用于实现百度云果蔬物体的识别，其余物体识别可以根据百度云文档自行修改
+
+本例程图片会先传输至巴法云的图床生成该图片的url链接地址，然后在百度云调用该图片的链接进行识图
+ 
+如果需要识别其他物体，请参阅百度云相关的技术文档
+
+图像识别类：https://ai.baidu.com/ai-doc/IMAGERECOGNITION/Kk3bcxbxj
+
+文字识别类：https://ai.baidu.com/ai-doc/OCR/Ek3h7xypm
+
+人脸识别类：https://ai.baidu.com/ai-doc/FACE/7k37c1jfr
+
+人体分析类：https://ai.baidu.com/ai-doc/BODY/lk3cpywzd
+ 
+**注意：巴法云和百度云部分项目为收费或限制免费使用次数，请仔细阅读其官方文档和使用条款！！！！！！！！！！**
+
+
+:download:`Arduino程序下载： sentry2_esp8285_baidu_ingredient_classify_via_bemfa.zip <demo/sentry2_esp8285_baidu_ingredient_classify_via_bemfa.zip>`
+
+.. image:: images/demo_pic_baidu_01.png
+
+无线图传&遥控
+************************
+
+本示例程序用于局域网内的实时图传显示以及WiFi遥控功能
+
+:download:`Arduino程序下载： sentry2_esp8285_image_transfer_remoter.zip <demo/sentry2_esp8285_image_transfer_remoter.zip>`
+
+图传界面：
+
+.. image:: images/demo_pic_remoter_01.png
+
+带遥控按键的图传界面：
+
+.. image:: images/demo_pic_remoter_02.png

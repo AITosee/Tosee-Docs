@@ -28,6 +28,14 @@ Sentry2
 
     Vision/index
 
+WiFi功能介绍
+------------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    WiFi/index
+
 Sentry-Arduino 开发文档
 ------------------------
 
