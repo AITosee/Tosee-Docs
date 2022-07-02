@@ -9,7 +9,7 @@
 Sentry2视觉传感器采用先进的64位RISC-V神经网络处理器K210开发设计，集成多种先进的离线视觉处理算法，可以满足基本的视觉处理需求。
 板载ESP8285-WiFi芯片，可以直接通过Arduino进行编程开发，实现云端图像识别，无线图传，AIoT物联网等应用。ESP8285可以作为K210的协处理器，无需外接主控也可进行AI编程的学习。
 
-目前有2个版本：企业版、消费版。两个版本在硬件配置和算法上有所不同，以下文档若无特殊说明，按企业版进行介绍
+目前有2个版本：企业版（标识E）、消费版（标识C）。两个版本在硬件配置和算法上有所不同，以下文档若无特殊说明，按企业版进行介绍，开机后查看屏幕右下角标识进行区分。
 
 应用领域:智能机器人、智能小车、创意设计、STEAM教育、创客比赛、智能玩具、AIoT物联网、学校课题设计
 
@@ -87,15 +87,16 @@ Sentry2视觉传感器采用先进的64位RISC-V神经网络处理器K210开发�
 开发平台与驱动库
 ----------------
 
-================================================    ================================    ================================    ================================================    ================    ================
-开发平台                                              编程语言                             主控设备                            驱动库链接                                               企业版              消费版
-================================================    ================================    ================================    ================================================    ================    ================
-:ref:`Arduino<chapter_arduino_index>`               C/C++                                Arduino                            https://github.com/AITosee/Sentry-Arduino             支持                支持
-:ref:`MakeCode<chapter_makecode_index>`             图形化                               Micro:bit                           https://github.com/AITosee/pxt-sentry                  支持                支持
-:ref:`Mind+<chapter_mindplus_index>`                图形化，C/C++，MicroPython           Arduino、Micro:bit、掌控板             https://github.com/AITosee/ext-sentry                   支持                支持
-:ref:`Mixly<chapter_mixly_index>`                   图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly               支持                支持
-:ref:`Mixly<chapter_mixly_index>`                   MicroPython                          Micro:bit、掌控板                    https://github.com/AITosee/Sentry-Mixly               支持                支持
-================================================    ================================    ================================    ================================================    ================    ================
+================================================    ================================    ================================    ========================================================================================================    ================    ================
+开发平台                                              编程语言                             主控设备                            驱动库链接                                                                                                       企业版              消费版
+================================================    ================================    ================================    ========================================================================================================    ================    ================
+:ref:`Arduino<chapter_arduino_index>`               C/C++                                Arduino                            https://github.com/AITosee/Sentry-Arduino/releases                                                             支持                支持
+:ref:`MakeCode<chapter_makecode_index>`             图形化                               Micro:bit                           https://github.com/AITosee/pxt-sentry/releases                                                                  支持                支持
+:ref:`Mind+<chapter_mindplus_index>`                图形化，C/C++，MicroPython            Arduino、Micro:bit、掌控板             https://github.com/AITosee/ext-sentry/releases                                                                支持                支持
+:ref:`Mixly<chapter_mixly_index>`                   图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly/releases                                                               支持                支持
+:ref:`BXY<chapter_micropython_index>`               MicroPython                          Micro:bit、掌控板                    https://github.com/AITosee/Sentry-microPython/releases                                                         支持                支持
+ARM PC                                              C/C++                               树莓派，Linux                        :download:`Sentry-Arduino-1.2.4_for_linux.zip <../Download/libs/Sentry-Arduino-1.2.4_for_linux.zip>`          支持                支持
+================================================    ================================    ================================    ========================================================================================================    ================    ================
 
 使用说明
 ----------------

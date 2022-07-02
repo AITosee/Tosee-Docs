@@ -17,6 +17,8 @@ Arduino             C/C++                                Arduino                
 MakeCode            图形化                               Micro:bit                           https://github.com/AITosee/pxt-sentry/releases
 Mind+               图形化，C/C++，MicroPython           Arduino、Micro:bit、掌控板             https://github.com/AITosee/ext-sentry/releases
 Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly/releases
+BXY                 MicroPython                          Micro:bit、掌控板                    https://github.com/AITosee/Sentry-microPython/releases
+ARM PC              C/C++                               树莓派、Linux                         :download:`Sentry-Arduino-1.2.4_for_linux.zip <../Download/libs/Sentry-Arduino-1.2.4_for_linux.zip>`
 ================    ================================    ================================    ================================================ 
 
 

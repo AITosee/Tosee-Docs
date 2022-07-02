@@ -1,3 +1,5 @@
+.. _chapter_micropython_index:
+
 Sentry-microPython 开发教程
 ===========================
 
