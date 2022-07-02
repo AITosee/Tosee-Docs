@@ -68,6 +68,14 @@ Sentry-MakeCode 开发文档
 
     MakeCode/index
 
+Sentry-microPython 开发文档
+---------------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    microPython/index
+
 示例程序
 ------------------------
 
