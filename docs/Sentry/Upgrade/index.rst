@@ -6,14 +6,14 @@
 准备工作
 --------
 
-1. 通过百度网盘下载对应 ``固件`` 及 ``固件更新工具``： https://pan.baidu.com/s/1HlYivYUUBt0ubTfRAchfMQ?pwd=ijxp (密码: ijxp)
+1. 可以在这里 :ref:`下载固件<chapter_download_firmware_index>` 以及必要的 :ref:`固件升级工具及USB驱动<chapter_download_third_party_index>`
 2. 解压 ``固件更新工具`` 压缩包备用
 
 固件升级步骤
 ------------
 
 1. 安装USB驱动
-    安装USB驱动工具，如果电脑可以识别设备，则可以不用安装 :download:`点击下载驱动文件 <http://www.wch.cn/downloads/file/315.html?time=2022-05-07%2016:08:41&code=9Nh29r7jiQsj7QDu5IffgdrpzpKC0igITm3n3zuj>`
+    安装 :ref:`USB驱动<chapter_download_third_party_index>`，如果电脑可以识别设备，则可以不用安装
 
 2. 连接设备
 

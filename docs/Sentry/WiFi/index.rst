@@ -205,3 +205,14 @@ Sentry2可以直接生成base64编码的jpg图片，esp8285可以通过指令进
 带遥控按键的图传界面：
 
 .. image:: images/demo_pic_remoter_02.png
+
+
+在WiFi芯片中调用本地算法
+************************
+
+本示例程可以实现在ESP8285的芯片中控制K210的算法，使用Sentry_Arduino的标准库
+
+因此玩家无需外接主控，也可以运行算法
+
+:download:`Arduino程序下载： sentry2_esp8285_run_vision.zip <demo/sentry2_esp8285_run_vision.zip>`
+
