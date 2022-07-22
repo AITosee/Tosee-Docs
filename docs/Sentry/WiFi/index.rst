@@ -183,11 +183,40 @@ Sentry2可以直接生成base64编码的jpg图片，esp8285可以通过指令进
 
 本示例用于实现百度云的车牌识别
 
-注意条款与百度果蔬识别的介绍相同
-
 :download:`Arduino程序下载： sentry2_esp8285_baidu_ocr_license_plate_by_image.zip <demo/sentry2_esp8285_baidu_ocr_license_plate_by_image.zip>`
 
 .. image:: images/demo_pic_baidu_03.png
+
+
+百度云-OCR通用文字识别
+************************
+
+本示例用于实现百度云的OCR通用文字识别，支持中文、英文、日文、韩文、法文、西班牙语等
+
+:download:`Arduino程序下载： sentry2_esp8285_baidu_ocr_general_basic_by_image.zip <demo/sentry2_esp8285_baidu_ocr_general_basic_by_image.zip>`
+
+.. image:: images/demo_pic_baidu_04.png
+
+
+百度云-通用场景物体识别
+************************
+
+本示例用于实现百度云的通用场景识别，诸如猫、狗、汽车、房子、漫画、大树、花朵、饰品等
+
+:download:`Arduino程序下载： sentry2_esp8285_baidu_general_by_image.zip <demo/sentry2_esp8285_baidu_general_by_image.zip>`
+
+.. image:: images/demo_pic_baidu_05.png
+
+
+百度云-手势识别
+************************
+
+本示例用于实现百度云的手势识别，包含24种手势：拳头、OK、祈祷、作揖、作别、单手比心、点赞、Diss、我爱你、掌心向上、双手比心（3种）、数字（9种）、Rock、竖中指。
+
+:download:`Arduino程序下载： sentry2_esp8285_baidu_gesture_by_image.zip <demo/sentry2_esp8285_baidu_gesture_by_image.zip>`
+
+.. image:: images/demo_pic_baidu_06.png
+
 
 无线图传&遥控
 ************************
