@@ -28,7 +28,7 @@ Sentry2
 
     Vision/index
 
-WiFi功能介绍
+WiFi介绍
 ------------------------
 
 .. toctree::
@@ -84,7 +84,7 @@ Sentry-microPython 开发文档
 
     Demo/index
 
-固件升级教程
+固件升级
 ------------------------
 
 .. toctree::

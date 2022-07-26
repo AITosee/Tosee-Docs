@@ -289,6 +289,6 @@ Sentry面向一个相对静止的区域，背景中没有移动的物体，将�
 WiFi例程
 -----------------------
 
-:ref:`详见WiFi章节介绍中的例程<chapter_wifi_demo_index>`  
+:ref:`详见WiFi介绍章节中的例程<chapter_wifi_demo_index>`  
 
 

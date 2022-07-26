@@ -1,6 +1,6 @@
 .. _chapter_wifi_index:
 
-WiFi功能介绍 
+WiFi介绍 
 ================
 
 简介
@@ -123,16 +123,32 @@ Reset Method：“no dtr (aka ck)”（烧录时硬件复位模式，只可设�
 *注意：本示例程序仅作为WiFi功能的使用参考，并不对第三方平台的识别性能、安全性、可用性等提供保障*
 
 
-巴法云-图床
+巴法云-图片云端上传-图床
 ************************
 
 本示例用于实现图片上传至巴法云的图床，可以通过手机微信查看图片，也可以由第三方云端识图调用该图片地址
 
-**注意：巴法云和百度云部分项目为收费或限制免费使用次数，请仔细阅读其官方文档和使用条款！！！！！！！！！！**
+**注意：巴法云部分项目为收费或限制免费使用次数，请仔细阅读其官方文档和使用条款！！！！！！！！！！**
 
 :download:`Arduino程序下载： sentry2_esp8285_bemfa_image_transfer.zip <demo/sentry2_esp8285_bemfa_image_transfer.zip>`
 
 .. image:: images/demo_pic_bemfa_01.png
+
+
+巴法云-MQTT控制Sentry2算法调用
+************************
+
+本示例可通过MQTT的Topic主题订阅和消息推送来控制Sentry2的算法开启或关闭，以及获取检测结果
+
+:download:`Arduino程序下载： sentry2_esp8285_bemfa_mqtt_run_vision.zip <demo/sentry2_esp8285_bemfa_mqtt_run_vision.zip>`
+
+.. image:: images/demo_pic_bemfa_02.png
+
+.. image:: images/demo_pic_bemfa_03.png
+
+.. image:: images/demo_pic_bemfa_04.png
+
+.. image:: images/demo_pic_bemfa_05.png
 
 
 百度云-果蔬识别-通过图片URL方式
