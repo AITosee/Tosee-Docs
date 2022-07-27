@@ -234,6 +234,22 @@ Sentry2可以直接生成base64编码的jpg图片，esp8285可以通过指令进
 .. image:: images/demo_pic_baidu_06.png
 
 
+微软Azure-通用物体识别
+************************
+
+本示例用于实现微软 Azure 的通用场景识别，诸如猫、狗、汽车、树等
+
+你需要注册一个Azure帐号并开通相关的服务才可以使用，请详见其官网
+
+Azure 主页： https://azure.microsoft.com/en-us/
+
+**注意：Azure 部分项目为收费或限制免费使用次数，请仔细阅读其官方文档和使用条款！！！！！！！！！！**
+
+:download:`Arduino程序下载： sentry2_esp8285_microsoft_azure_detect_objects_by_image.zip <demo/sentry2_esp8285_microsoft_azure_detect_objects_by_image.zip>`
+
+.. image:: images/demo_pic_azure_01.png
+
+
 无线图传&遥控
 ************************
 
