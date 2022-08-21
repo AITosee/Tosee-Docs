@@ -42,7 +42,7 @@ Sentry-Arduino 开发文档
 .. toctree::
     :maxdepth: 2
 
-    Arduino/index
+    ../Sentry/Arduino/index
 
 Sentry-Mixly 开发文档
 ------------------------
@@ -99,4 +99,3 @@ Sentry-microPython 开发文档
     :maxdepth: 2
 
     Download/index
-
