@@ -23,13 +23,13 @@ Sentry2：高性能视觉传感器
 
    Sentry2/introduction
 
-通讯协议指令
+通讯协议
 --------------------------------
 
 .. toctree::
    :maxdepth: 2
 
-   Protocol/index
+   Common/Protocol/index
 
 问题&贡献
 --------------------------------
