@@ -65,7 +65,7 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
             #include <Arduino.h>
             #include <Sentry.h>
 
-            /* 定义 Sentry 型号，此处使用了 Sentry2 作为例子 */
+            /* 定义 Sentry 型号，此处使用了 Sentry2 作为例子，可替换成其他型号如 Sentry1 等 */
             typedef Sentry2 Sentry;
 
             /* 实例化 Sentry，创建 Sentry 变量，并指定 Sentry 地址为 0x60 */
@@ -93,7 +93,7 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
             #include <Sentry.h>
             #include <Wire.h>
 
-            /* 定义 Sentry 型号，此处使用了 Sentry2 作为例子 */
+            /* 定义 Sentry 型号，此处使用了 Sentry2 作为例子，可替换成其他型号如 Sentry1 等 */
             typedef Sentry2 Sentry;
 
             /* 实例化 Sentry，创建 Sentry 变量，并指定 Sentry 地址为 0x60 */
@@ -139,7 +139,7 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
         运动物体        kVisionMotionDetect
         ============    ===========
 
-        算法具体介绍可见： :doc:`../Vision/index`
+        算法具体介绍可见： :doc:`../../Sentry2/Vision/index`
 
 3. 获取算法识别结果
 

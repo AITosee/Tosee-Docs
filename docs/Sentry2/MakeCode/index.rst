@@ -12,6 +12,12 @@ Sentry-MakeCode 开发文档
 1. 打开 `MakeCode 在线编程界面 <https://makecode.microbit.org/>`_。
 2. 新建工程。
 3. 依次点击 ``高级→扩展``，在搜索栏输入 ``https://github.com/AITosee/pxt-sentry``。
+
+    .. tip::
+
+        若提示编译好的固件过大无法下载，可通过使用 I2C 专版来减小库的体积（仅支持 I2C 通讯）：
+        ``https://github.com/AITosee/pxt-sentry2-i2c``
+
 4. 点击搜索出来的库添加，即可完成库的加载。
 
 例程

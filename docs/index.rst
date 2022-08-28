@@ -6,9 +6,34 @@
 欢迎来到瞳芯智能文档中心:D
 ===============================
 
+
+Sentry1：入门级视觉传感器
+--------------------------------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Sentry2: 第二代高性能视觉传感器
 
-   Sentry/introduction
+   Sentry1/introduction
+
+Sentry2：高性能视觉传感器
+--------------------------------
+
+.. toctree::
+   :maxdepth: 2
+
+   Sentry2/introduction
+
+通讯协议
+--------------------------------
+
+.. toctree::
+   :maxdepth: 2
+
+   Common/Protocol/index
+
+问题&贡献
+--------------------------------
+.. toctree::
+   :maxdepth: 2
+   
    contributing

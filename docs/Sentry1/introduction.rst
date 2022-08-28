@@ -1,16 +1,7 @@
-Sentry2
+Sentry1
 =======
 
-感谢选择 **Sentry2** 视觉传感器 :D
-
-快速上手
-------------------------
-
-.. image:: images/sentry2_run_vision_by_stick.png
-
-1. 将 Sentry2 通过 USB 连接至电脑
-2. 上下拨动导航键即可快速切换算法
-3. 将 Sentry2 摄像头面向需要识别的物体，即可看到识别情况
+感谢选择 **Sentry1** 视觉传感器 :D
 
 硬件介绍
 ------------------------
@@ -28,21 +19,13 @@ Sentry2
 
     Vision/index
 
-WiFi介绍
-------------------------
-
-.. toctree::
-    :maxdepth: 2
-
-    WiFi/index
-
 Sentry-Arduino 开发文档
 ------------------------
 
 .. toctree::
     :maxdepth: 2
 
-    Arduino/index
+    ../Common/Arduino/index
 
 Sentry-Mixly 开发文档
 ------------------------
@@ -99,4 +82,3 @@ Sentry-microPython 开发文档
     :maxdepth: 2
 
     Download/index
-
