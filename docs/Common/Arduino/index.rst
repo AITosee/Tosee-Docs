@@ -124,6 +124,16 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
     .. note::
 
+        当前 ``Sentry1`` 支持的算法包括：
+
+        ============    ===========
+        颜色识别        kVisionColor
+        色块检测        kVisionBlob
+        线条检测        kVisionLine
+        卡片检测        kVisionCard
+        人体检测        kVisionBody
+        ============    ===========
+
         当前 ``Sentry2`` 支持的算法包括：
 
         ============    ===========
