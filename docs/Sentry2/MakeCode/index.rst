@@ -15,7 +15,7 @@ Sentry-MakeCode 开发文档
 
     .. tip::
 
-        若提示编译好的固件过大无法下载，可通过使用 I2C 专版来减小库的体积（仅支持 I2C 通讯）：
+        由于micro:bit程序空间现指，建议采用 I2C 通讯模式，导入下方 I2C 通讯专用库（仅支持 I2C 通讯，体积小）：
         ``https://github.com/AITosee/pxt-sentry2-i2c``
 
 4. 点击搜索出来的库添加，即可完成库的加载。
