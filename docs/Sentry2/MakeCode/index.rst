@@ -15,7 +15,7 @@ Sentry-MakeCode 开发文档
 
     .. tip::
 
-        由于 micro:bit 程序空间有限，建议采用 I2C 通讯模式，导入下方通讯专用库（仅支持 I2C 通讯，体积小）：
+        由于 micro:bit 程序空间有限，建议采用 I2C 通讯模式，导入下方专用库（仅支持 I2C 通讯，体积小）：
         ``https://github.com/AITosee/pxt-sentry2-i2c``
 
 4. 点击搜索出来的库添加，即可完成库的加载。
