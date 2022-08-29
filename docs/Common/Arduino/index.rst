@@ -37,7 +37,9 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
 2. 设置 Sentry 的通讯模式
 
-    - 将 Sentry 右上角摇杆向右拨动三次进入硬件配置界面，将 ``Output`` 设置为 ``UART``，点击 ``YES`` 并向左拨动三次摇杆退出设置。
+    - Sentry1 用户可通过将摇杆向下长按 2 秒来切换通讯模式。
+
+    - Sentry2 用户可通过将 Sentry2 右上角摇杆向右拨动三次进入硬件配置界面，将 ``Output`` 设置为 ``UART``，点击 ``YES`` 并向左拨动三次摇杆退出设置。
 
         .. image:: images/sentry_set_uart_mode.jpg
 
