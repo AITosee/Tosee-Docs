@@ -37,7 +37,7 @@ Arduino 库中提供了丰富的例程，这些例程默认使用了 **串口模
 
 2. 设置 Sentry 的通讯模式
 
-    - Sentry1 用户可通过将摇杆向下长按 2 秒来切换通讯模式。
+    - Sentry1 用户可通过将摇杆向下长按 3 秒以上来切换通讯模式，松手后闪烁红色即为串口模式，闪烁绿色即为 I2C 模式，闪烁蓝色即为简单指令模式， 详见： :doc:`../../Sentry1/Hardware/index` ->模式按键 。
 
         .. image:: images/arduino_sentry1_backword.png
             :width: 300
