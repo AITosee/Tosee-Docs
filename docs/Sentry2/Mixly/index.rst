@@ -3,7 +3,7 @@
 Sentry-Mixly 开发文档
 =====================
 
-Sentry-Mixly 库是一个专门为 Mixly 图形化编程打造的驱动库，适用于 Sentry2。
+Sentry-Mixly 库是一个专门为 Mixly 图形化编程打造的驱动库，适用于 Sentry 系列产品。
 
 开发环境安装
 ------------
