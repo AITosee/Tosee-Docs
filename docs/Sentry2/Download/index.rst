@@ -16,11 +16,11 @@ Sentry2驱动库
 ================    ================================    ================================    ================================================   
 开发平台              编程语言                             主控设备                             驱动库链接                                             
 ================    ================================    ================================    ================================================    
-Arduino             C/C++                                Arduino                            https://github.com/AITosee/Sentry-Arduino/releases
+Arduino             C/C++                                Arduino                            https://github.com/AITosee/Sentry-Arduino/releases 或 :download:`本地下载 <../Download/libs/Sentry-Arduino-1.3.3.zip>`
 MakeCode            图形化                               Micro:bit                           https://github.com/AITosee/pxt-sentry/releases
 Mind+               图形化，C/C++，MicroPython           Arduino、Micro:bit、掌控板             https://github.com/AITosee/ext-sentry/releases
-Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly/releases
-BXY                 MicroPython                          Micro:bit、掌控板                    https://github.com/AITosee/Sentry-microPython/releases
+Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly/releases 或 :download:`本地下载 <../Download/libs/Sentry-Mixly-v1.3.6.zip>`
+BXY                 MicroPython                          Micro:bit、掌控板                    https://github.com/AITosee/Sentry-microPython/releases 或 :download:`本地下载 <../Download/libs/Sentry-microPython-1.2.2.zip>`
 ARM PC              C/C++                               树莓派、Linux                         :download:`Sentry-Arduino-1.2.4_for_linux.zip <../Download/libs/Sentry-Arduino-1.2.4_for_linux.zip>`
 ================    ================================    ================================    ================================================ 
 
@@ -39,7 +39,8 @@ Sentry2固件
 版本                 日期                 说明                链接
 ================    ================    ================    ================
 V2.1.5c              2022.04.25          企业版               :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_1_5c_20220425_e.kfpkg>`
-V2.2.1               2022.07.20          企业版，公测          :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_2_1_20220720_e.kfpkg>`
+V2.2.1               2022.07.20          企业版               :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_2_1_20220720_e.kfpkg>`
+V2.2.2               2022.11.05          企业版，公测          :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_2_2_20221105_e.kfpkg>`
 ================    ================    ================    ================
 
 消费版固件
@@ -49,7 +50,8 @@ V2.2.1               2022.07.20          企业版，公测          :download:`
 版本                 日期                 说明                链接
 ================    ================    ================    ================
 V2.1.5c              2022.04.25          消费版              :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_1_5c_20220425_consumer_e.kfpkg>`
-V2.2.1               2022.07.20          消费版，公测         :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_2_1_20220720_consumer_e.kfpkg>`
+V2.2.1               2022.07.20          消费版              :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_2_1_20220720_consumer_e.kfpkg>`
+V2.2.2               2022.11.05          消费版，公测         :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_2_2_20221105_consumer_e.kfpkg>`
 ================    ================    ================    ================
 
 
@@ -61,7 +63,7 @@ V2.2.1               2022.07.20          消费版，公测         :download:`�
 ========================================    ================    ================================================================    ================================
 名称                                         版本                 说明                                                                 链接
 ========================================    ================    ================================================================    ================================
-固件更新说明                                   V2.2.1              固件更新内容的介绍说明                                                 :download:`点击下载 <../Download/docs/Sentry2更新说明_v2.2.1_2022.07.20.pdf>`
+固件更新说明                                   V2.2.2              固件更新内容的介绍说明                                                 :download:`点击下载 <../Download/docs/Sentry2更新说明_v2.2.2_2022.11.05.pdf>`
 固件更新操作手册                                V1.2                固件更新操作方法指导                                                   :download:`点击下载 <../Download/docs/固件更新操作手册V1.2.pdf>`
 WiFi固件开发环境搭建与烧录指导手册                V1.0                板载ESP8285 WiFi芯片Arduino开发环境搭建与固件烧录指导                    :download:`点击下载 <../Download/docs/Sentry2 WiFi固件开发环境搭建与烧录指导手册_V1.0.pdf>`
 ========================================    ================    ================================================================    ================================
