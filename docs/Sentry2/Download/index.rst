@@ -40,7 +40,7 @@ Sentry2固件
 ================    ================    ================    ================
 V2.1.5c              2022.04.25          企业版               :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_1_5c_20220425_e.kfpkg>`
 V2.2.1               2022.07.20          企业版               :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_2_1_20220720_e.kfpkg>`
-V2.2.2               2022.11.05          企业版，公测          :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_2_2_20221105_e.kfpkg>`
+V2.2.3               2022.11.06          企业版，公测          :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_2_3_20221106_e.kfpkg>`
 ================    ================    ================    ================
 
 消费版固件
@@ -51,7 +51,7 @@ V2.2.2               2022.11.05          企业版，公测          :download:`
 ================    ================    ================    ================
 V2.1.5c              2022.04.25          消费版              :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_1_5c_20220425_consumer_e.kfpkg>`
 V2.2.1               2022.07.20          消费版              :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_2_1_20220720_consumer_e.kfpkg>`
-V2.2.2               2022.11.05          消费版，公测         :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_2_2_20221105_consumer_e.kfpkg>`
+V2.2.3               2022.11.06          消费版，公测         :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_2_3_20221106_consumer_e.kfpkg>`
 ================    ================    ================    ================
 
 
