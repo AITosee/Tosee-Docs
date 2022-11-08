@@ -267,7 +267,13 @@ ID:3 标签识别-Apriltag
 
     apriltag标签为一组已经定义好的黑白方块图案，不同的编码形式使用的方块数量是不同的。每个图案都有一个预定义的分类标签值，识别后会返回该值。
 
-    `Apriltag图案下载 <https://github.com/AprilRobotics/apriltag-imgs/tree/master>`
+    :download:`Apriltags图案下载 <https://github.com/AprilRobotics/apriltag-imgs/tree/master>`
+
+    :download:`Apriltags标签编码-16h5 本地下载 <../Download/docs/apriltags标签编码-16h5.pdf>`
+
+    :download:`Apriltags标签编码-25h9 本地下载 <../Download/docs/apriltags标签编码-25h9.pdf>`
+    
+    :download:`Apriltags标签编码-36h11 本地下载 <../Download/docs/apriltags标签编码-36h11.pdf>`
 
 * 配置参数
 
