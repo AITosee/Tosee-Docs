@@ -21,7 +21,7 @@ MakeCode            图形化                               Micro:bit           
 Mind+               图形化，C/C++，MicroPython           Arduino、Micro:bit、掌控板             https://github.com/AITosee/ext-sentry/releases
 Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly/releases 或 :download:`本地下载 <../Download/libs/Sentry-Mixly-v1.3.6.zip>`
 BXY                 MicroPython                          Micro:bit、掌控板                    https://github.com/AITosee/Sentry-microPython/releases 或 :download:`本地下载 <../Download/libs/Sentry-microPython-1.2.2.zip>`
-ARM PC              C/C++                               树莓派、Linux                         :download:`Sentry-Arduino-1.2.4_for_linux.zip <../Download/libs/Sentry-Arduino-1.2.4_for_linux.zip>`
+ARM PC              C/C++                               树莓派、Linux                         :download:`Sentry-Arduino-1.3.3_for_linux.zip <../Download/libs/Sentry-Arduino-1.3.3_for_linux.zip>`
 ================    ================================    ================================    ================================================ 
 
 
