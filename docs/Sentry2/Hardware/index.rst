@@ -12,6 +12,8 @@ Sentry2视觉传感器采用先进的64位RISC-V神经网络处理器K210开发�
 
 应用领域:智能机器人、智能小车、创意设计、STEAM教育、创客比赛、智能玩具、AIoT物联网、学校课题设计
 
+`点击观看视频：“Sentry2视觉传感器-功能介绍” <https://www.bilibili.com/video/BV19v4y1D785/>`_
+
 .. image:: images/sentry2_top_bot_view.png
 
 
@@ -101,6 +103,8 @@ ARM PC                                              C/C++                       
 ----------------
 Sentry2视觉传感器可以通过通讯接口与主控制器相连接，也可以通过USB与电脑连接。通讯接口可以在UI界面中配置为UART串口或I2C模式，还可以修改设备地址和波特率等参数。
 
+`点击观看视频：“Sentry2视觉传感器-Arduino使用指导” <https://www.bilibili.com/video/BV1M24y1k7UB/>`_
+
 驱动库、固件、资料手册、第三方资源等可参阅:
 :ref:`资源下载<chapter_download_index>`
 章节
@@ -130,6 +134,23 @@ Sentry2视觉传感器可以通过通讯接口与主控制器相连接，也可�
 ************************
 以Arduino UNO举例说明
 
+**I2C模式**
+
+.. image:: images/sentry2_connection_arduino_i2c.png
+
+
+**软串口模式**
+
+.. image:: images/sentry2_connection_arduino_softserial.png
+
+**注意：软串口模式下，Arduino的TX和RX引脚可以自由定义，但需要与程序中的定义保持一致，本例中RX信号为引脚10,TX信号为引脚11**
+
+.. image:: images/sentry2_connection_arduino_softserial_code.png
+
+
+**注意：软串口模式下，波特率一般不高于57600，较低的波特率，稳定性较好**
+
+
 **UART模式**
 
 .. image:: images/sentry2_connection_arduino_uart.png
@@ -140,10 +161,6 @@ Sentry2视觉传感器可以通过通讯接口与主控制器相连接，也可�
 
 **注意：由于Arduino的RX和TX与烧录固件共用端口，因此在烧录程序时，需要断开RX，TX接线，推荐使用I2C或软串口模式**
 
-
-**I2C模式**
-
-.. image:: images/sentry2_connection_arduino_i2c.png
 
 UI界面
 ************************
@@ -198,6 +215,8 @@ UI设置界面
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 上电开机后便可以通过摇杆对视觉传感器进行操作，传感器采用5向导航摇杆，操作定义如下表所示：
 
+`点击观看视频：“Sentry2视觉传感器-按键操作指南” <https://www.bilibili.com/video/BV178411h7A6/>`_
+
 ================    ================    ================
 当前模式              操作方式              动作含义          
 ================    ================    ================
@@ -229,6 +248,8 @@ UI设置界面
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 用于设置视觉传感器与主控的通讯方式，设置后会自动保存，下次开机后不必再次设置，但当通讯异常时，需要检查这些参数是否被改变，有时固件更新后或调用了某些复位寄存器后会改变这些设置，此时需要重新设置
+
+`点击观看视频：“Sentry2视觉传感器-通讯模式设置” <https://www.bilibili.com/video/BV1Ve4y1m7D2/>`_
 
 .. image:: images/sentry2_set_output_mode.png 
 
