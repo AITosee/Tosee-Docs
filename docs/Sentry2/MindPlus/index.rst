@@ -1,7 +1,7 @@
 .. _chapter_mindplus_index:
 
-Sentry2-Mind+ 开发文档
-=====================
+Sentry-Mind+ 开发文档
+======================
 
 `Sentry2-MindPlus <https://github.com/AITosee/Sentry2-MindPlus>`_ 为适配 `Mind+ <http://mindplus.cc/>`_ 开发的驱动库，
 适用于 ``掌控版/microbit`` 在 Mind+ 上的 ``图形化`` 及 ``microPython`` 两大编程语言的开发。
@@ -25,13 +25,19 @@ Sentry2-Mind+ 开发文档
 
     .. image:: images/mindplus_sentry_example_color.png
 
-3. 二维码检测
+3. 人脸识别
 
-    .. image:: images/mindplus_sentry_example_qrcode.png
+    .. image:: images/mindplus_sentry_example_face.png
 
 4. 色块检测
 
     .. image:: images/mindplus_sentry_example_blob.png
+
+5. 深度学习
+
+    .. image:: images/mindplus_sentry_example_learning.png
+
+    .. attention:: 使用前需在 Sentry2 上提前学习好对应的物体
 
 模块说明
 --------
@@ -48,11 +54,11 @@ Sentry2-Mind+ 开发文档
 
     .. image:: images/mindplus_sentry_set_vision_status.png
 
-3. 设置返回结果坐标格式
+3. 设置摄像头白平衡
 
-    可选择返回坐标为 ``绝对坐标（0~长/宽）`` 或 ``相对坐标（0~100）``。
+    某些特殊场景下可固定摄像头白平衡。
 
-    .. image:: images/mindplus_sentry_set_coordinate_type.png
+    .. image:: images/mindplus_sentry_set_camera_awb.png
 
 4. 获取算法检测结果的数量
 
@@ -82,11 +88,9 @@ Sentry2-Mind+ 开发文档
 
     .. image:: images/mindplus_sentry_get_color.png
 
-9. 设置摄像头白平衡
+9. 获取线条检测算法的结果
 
-    某些特殊场景下可固定摄像头白平衡。
-
-    .. image:: images/mindplus_sentry_set_camera_awb.png
+    .. image:: images/mindplus_sentry_get_line.png
 
 10. 设置颜色识别算法参数
 
@@ -99,3 +103,11 @@ Sentry2-Mind+ 开发文档
         设置色块检测算法的最小识别大小。
 
         .. image:: images/mindplus_sentry_set_blob_param.png
+
+12. 设置通用算法的参数
+
+        .. image:: images/mindplus_sentry_set_param.png
+
+13. 设置算法参数的组数
+
+        .. image:: images/mindplus_sentry_set_param_num.png
