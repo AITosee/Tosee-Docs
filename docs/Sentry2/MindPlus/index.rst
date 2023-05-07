@@ -17,7 +17,7 @@ Sentry-Mind+ 开发文档
 例程
 ----
 
-1. 20类卡片识别
+1. 20类物体识别
 
     .. image:: images/mindplus_sentry_example_20class.png
 
