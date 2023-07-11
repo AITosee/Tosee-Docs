@@ -30,6 +30,16 @@ https://downloads.arduino.cc/arduino-1.8.19-windows.exe
 
 http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
+或者 
+
+https://arduino.me/packages/esp8266.json
+
+如果下载较慢，也可以直接下载：
+
+https://www.123pan.com/s/dJrKVv-b1GB
+
+以上信息来源：https://arduino.me/a/esp8266
+
 .. image:: images/esp8285_setup_02.png
 
 
