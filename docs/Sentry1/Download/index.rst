@@ -30,7 +30,7 @@ ARM PC              C/C++                               树莓派、Linux       
 Sentry1固件
 ----------------
 
-:download:`进入百度网盘 < https://pan.baidu.com/s/1HlYivYUUBt0ubTfRAchfMQ?pwd=ijxp>` **提取码 ijxp**
+:download:`进入百度网盘 < https://pan.baidu.com/s/13j4z5QLlk_XskL-F-pecWw?pwd=dtav>` **提取码 dtav**
 
 企业版固件
 ************************
