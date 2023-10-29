@@ -527,6 +527,297 @@ API 说明
 
         :return: 图像高度
 
+库二次开发教程-以 STM32F103C8T6 为例
+------------------------------------
+
+开发环境依赖
+++++++++++++
+
+1. 编译工具链需支持 C++11
+2. 编译工具链需支持 GNUC++
+3. 设备可用内存需 >= 1kb
+
+库结构介绍
+++++++++++
+
+::
+
+    ├ src/                          源代码根目录
+    │   ├ debug/                    调试文件目录
+    │   ├ hardware/                 硬件底层驱动库文件（UART/I2C）
+    │   │   ├ hw_sentry_i2c.*       *I2C 硬件驱动文件
+    │   │   └ hw_sentry_uart.*      *串口硬件驱动文件
+    │   └ protoc/                   串口协议库文件
+    └ examples/                     例程目录
+
+串口驱动开发
+++++++++++++
+
+串口驱动开发仅需修改 ``src/hardware/hw_sentry_uart.h`` 和 ``src/hardware/hw_sentry_uart.cpp`` 两个驱动文件即可。
+
+- ``src/hardware/hw_sentry_uart.h`` 头文件分析
+
+    .. code-block:: cpp
+        :linenos:
+
+        class HwSentryUart {
+          ...
+          typedef int hw_uart_t;    // 串口类型定义
+          ...
+          /**
+          * @brief 检查串口待接收的数据数量
+          * @return 串口缓存内待接收的数据字节数
+          */
+          virtual size_t available(void);
+          /**
+          * @brief 读取串口缓存内的数据，若串口缓存内数据数量小于输入 buffer 长度，
+          *        则等待直到串口超时
+          * @param[out] 外部内存地址
+          * @param[in] 外部内存长度
+          * @return 读取到的数据的长度
+          */
+          virtual size_t read(uint8_t* buf, size_t length);
+          /**
+          * @brief 将数据发送至串口
+          * @param[in] 外部内存地址
+          * @param[in] 外部内存长度
+          * @return 写入数据的长度
+          */
+          virtual size_t write(uint8_t* buf, size_t length);
+          ...
+        };
+
+- STM32F103C8T6 串口驱动 ``Serial.c`` 开发
+
+    .. code-block:: cpp
+        :linenos:
+
+        #include "stm32f10x.h"
+        #include <stdio.h>
+        #include <stdarg.h>
+        #include "Delay.h"
+
+        uint8_t Serial_RxRingbuffer[128];
+        int ring_buffer_front;
+        int ring_buffer_back;
+        int ring_buffer_size;
+
+        void Serial_Init(void)
+        {
+            RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+            RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+
+            GPIO_InitTypeDef GPIO_InitStructure;
+            GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+            GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+            GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+            GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+            GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
+            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+            GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+            USART_InitTypeDef USART_InitStructure;
+            USART_InitStructure.USART_BaudRate = 9600;
+            USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+            USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
+            USART_InitStructure.USART_Parity = USART_Parity_No;
+            USART_InitStructure.USART_StopBits = USART_StopBits_1;
+            USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+            USART_Init(USART1, &USART_InitStructure);
+
+            USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
+            USART_Cmd(USART1, ENABLE);
+
+            NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+
+            NVIC_InitTypeDef NVIC_InitStructure;
+            NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+            NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+            NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+            NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+            NVIC_Init(&NVIC_InitStructure);
+
+            USART_Cmd(USART1, ENABLE);
+
+            ring_buffer_front = 0;
+            ring_buffer_back = 0;
+            ring_buffer_size = 0;
+        }
+
+        void Serial_SendByte(uint8_t Byte)
+        {
+            USART_SendData(USART1, Byte);
+            while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);
+        }
+
+        void Serial_SendArray(uint8_t *Array, uint16_t Length)
+        {
+            uint16_t i;
+            for (i = 0; i < Length; i ++)
+            {
+                Serial_SendByte(Array[i]);
+            }
+        }
+
+        int Serial_Available(void)
+        {
+            return ring_buffer_size;
+        }
+
+        /**
+        * @brief 将串口缓存中的数据读取到外部内存
+        */
+        int Serial_ReadArray(uint8_t *Array, uint16_t Length)
+        {
+            int ret = 0;
+            int err_cnt = 0;
+            while (ret != Length)
+            {
+                // 判断串口缓存内是否有数据
+                if (ring_buffer_size > 0)
+                {
+                    Array[ret] = Serial_RxRingbuffer[ring_buffer_front];
+                    --ring_buffer_size;
+                    ++ring_buffer_front;
+                    ++ret;
+                    if (ring_buffer_front >= sizeof(Serial_RxRingbuffer))
+                    {
+                        ring_buffer_front = 0;
+                    }
+                }
+                else
+                {
+                    // 若串口缓存内没有足够数据，则等待 10ms后再次读取，
+                    // 若超过 1000ms 没有读取到足够数据，则超时返回
+                    ++err_cnt;
+                    if (err_cnt > 100)
+                    {
+                        break;
+                    }
+                    Delay_ms(10);
+                }
+            }
+            return ret;
+        }
+
+        void USART1_IRQHandler(void)
+        {
+            if (USART_GetITStatus(USART1, USART_IT_RXNE) == SET)
+            {
+                // 从将从串口读取到的数据先存到串口缓存
+                uint8_t RxData = USART_ReceiveData(USART1);
+                if (ring_buffer_size < sizeof(Serial_RxRingbuffer))
+                {
+                    Serial_RxRingbuffer[ring_buffer_back] = RxData;
+                    ++ring_buffer_size;
+                    ++ring_buffer_back;
+                    if (ring_buffer_back >= sizeof(Serial_RxRingbuffer))
+                    {
+                        ring_buffer_back = 0;
+                    }
+                }
+
+                USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+            }
+        }
+
+
+- ``src/hardware/hw_sentry_uart.cpp`` Sentry 串口驱动开发
+
+    .. code-block:: cpp
+        :linenos:
+
+        #include <stdio.h>
+        #include "debug/debug_tool.h"
+        #include "hw_sentry_uart.h"
+        #include "Serial.h"
+
+        namespace tosee_sentry {
+
+        HwSentryUart::HwSentryUart(hw_uart_t hw_port)
+            : hw_port_(hw_port) {
+        }
+
+        HwSentryUart::~HwSentryUart() {
+        }
+
+        size_t HwSentryUart::available(void) {
+            return Serial_Available();
+        }
+
+        size_t HwSentryUart::read(uint8_t* buf, size_t length) {
+            return Serial_ReadArray(buf, length);
+        }
+
+        size_t HwSentryUart::write(uint8_t* buf, size_t length) {
+            Serial_SendArray(buf, (uint16_t)length);
+            return length;
+        }
+
+        }  // namespace tosee_sentry
+
+I2C 驱动开发
+++++++++++++
+
+同串口驱动开发，
+I2C 驱动开发仅需修改 ``src/hardware/hw_sentry_i2c.h`` 和 ``src/hardware/hw_sentry_i2c.cpp`` 两个驱动文件即可。
+但 STM32F103C8T6 的硬件 I2C 存在问题，这里不提供 I2C 驱动相关代码，按照串口的方式实现 ``I2CRead`` 和 ``I2CWrite``
+两个函数即可。
+
+- ``src/hardware/hw_sentry_i2c.h`` 头文件分析
+
+    .. code-block:: cpp
+        :linenos:
+
+        class HwSentryI2C {
+        ...
+          //@type define I2C type
+          //  typedef TwoWire hw_i2c_t;
+          typedef int hw_i2c_t;
+        ...
+        /**
+          * @brief  I2C 读取一个寄存器.
+          * @param  reg_address: 寄存器地址.
+          * @param  temp: 寄存器值.
+          * @retval 0: 读取成功
+          *         非 0: 读取错误
+          */
+          virtual uint32_t I2CRead(uint8_t reg_address, uint8_t* temp);
+        /**
+          * @brief  I2C 往寄存器写入值.
+          * @param  reg_address: 寄存器地址.
+          * @param  value: 寄存器值.
+          * @retval 0: 写入成功
+          *         非 0: 写入错误
+          */
+          virtual uint32_t I2CWrite(uint8_t reg_address, uint8_t value);
+        ...
+        };
+
+完整例程
+++++++++
+
+例程以 Keil 作为开发工具。 :download:`完整例程下载 <Sentry-STM32F10x.zip>`
+
+- 硬件连接
+
+    如图，开发板上 PA9 连接 Sentry 上 TX 引脚，PA10 连接 Sentry 上 RX 引脚。
+
+    .. image:: images/arduino_sentry_stm32f10x_hardware_link.jpg
+        :width: 600
+
+- Sentry 通讯模式设置
+
+    例程中使用的是串口，Sentry 需设置成串口模式，Sentry 不同型号串口模式设置方法件本文的对应型号的 ``硬件介绍``。
+
+- 使用 Keil 打开例程，并下载例程至开发板
+
+- 查看现象
+
+    例程使用的是卡片算法的例程，成功烧录后 Sentry 正面 LED 会开启并亮起颜色，识别到卡片亮蓝色，没识别到物体亮红色。
+
 FAQ
 ---
 
