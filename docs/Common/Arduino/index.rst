@@ -803,7 +803,7 @@ I2C 驱动开发仅需修改 ``src/hardware/hw_sentry_i2c.h`` 和 ``src/hardware
 
 - 硬件连接
 
-    如图，开发板上 PA9 连接 Sentry 上 TX 引脚，PA10 连接 Sentry 上 RX 引脚。
+    如图，开发板上 PA9 连接 Sentry 上 RX 引脚，PA10 连接 Sentry 上 TX 引脚。
 
     .. image:: images/arduino_sentry_stm32f10x_hardware_link.jpg
         :width: 600
