@@ -20,8 +20,8 @@ Sentry2MV 库下载到设备
 ----------------------
 
 - 下载 Sentry2MV github 工程：https://codeload.github.com/AITosee/Sentry2MV/zip/refs/heads/main
-- 解压下载上一步的下载的 `.zip` 文件
-- 将 Sentry2 上的 SD 卡连接至电脑，并将解压得到的相关文件中的 `KPU/` 文件夹和 `sentry.py` 拷贝到 SD 卡上
+- 解压下载上一步的下载的 ``.zip`` 文件
+- 将 Sentry2 上的 SD 卡连接至电脑，并将解压得到的相关文件中的 ``KPU/`` 文件夹和 ``sentry.py`` 拷贝到 SD 卡上
 - 弹出 SD 卡，并将 SD 卡插回 Sentry2
 
 安装 CanMV IDE
