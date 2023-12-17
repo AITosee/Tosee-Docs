@@ -7,4 +7,4 @@ Sentry-mPythonX 库是一个专门为 mPythonX 打造的图形化库，适用于
 安装
 ----
 
-1. 库下载地址： https://github.com/AITosee/Sentry-mPython 。
+1. 库下载地址： https://github.com/AITosee/Sentry-mPythonX 。
