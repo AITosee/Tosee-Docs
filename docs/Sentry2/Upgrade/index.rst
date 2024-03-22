@@ -33,6 +33,14 @@
     .. image:: images/sentry_upgrade_press_key.png
         :scale: 50 %
 
+    .. attention::
+
+        **如果设备不能自动进入下载模式，可以尝试以下操作：**
+
+        **方法1： 在断电状态下，垂直压按摇杆不要松开，然后再插入USB上电，松开按键**
+
+        **方法2： 在上电状态下，垂直压按摇杆不要松开，然后点击RESET复位按键，松开按键**
+
     .. image:: images/sentry_upgrade_kflash_download.png
 
 5. 等待下载完成
