@@ -84,13 +84,13 @@ Sentry-mPythonX 开发文档
 
     ../Common/mPython/index
 
-.. Sentry2MV 开发文档
-.. ---------------------------
+Sentry2MV 开发文档
+---------------------------
 
-.. .. toctree::
-..     :maxdepth: 2
+.. toctree::
+    :maxdepth: 2
 
-..     Sentry2MV/index.rst
+    Sentry2MV/index.rst
 
 示例程序
 ------------------------
