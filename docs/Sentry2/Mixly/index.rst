@@ -8,12 +8,17 @@ Sentry-Mixly 库是一个专门为 Mixly 图形化编程打造的驱动库，适
 开发环境安装
 ------------
 
-1. 根据系统下载对应 `Mixly-v1.1.5 <https://pan.baidu.com/s/1A_k4T21rlfZpRbLttovN5A#list/path=%2F>`_
+1. 根据系统下载对应 `下载并安装Mixly2.0RC4，注意安装路径不要存在中文 <https://pan.baidu.com/s/1Ur39pkhnL8yznRqGbX2tkA?pwd=1022>`_
 2. 下载 `Sentry-Mixly <https://github.com/AITosee/Sentry-Mixly/releases/latest>`_ ``.zip`` 库
 3. 将步骤 2 中的 ``.zip`` 库解压
 4. 打开 Mixly，点击 ``导入库 > 本地导入``
-5. 找到步骤 3 中解压文件夹下的 ``Sentry.xml`` 文件，加载库
-6. 如右下角出现 ``Sentry`` 的图标，即表示导入成功
+5. 删除步骤3中解压文件夹下的 ``Sentry.xml`` 文件，然后选择 ``Sentry_rc4.xml`` 加载库
+
+   .. attention::
+
+       如果Mixly的版本为2.0RC3或更早的，请 **删除** ``Sentry_rc4.xml``，然后 **选择** ``Sentry.xml`` 加载库
+
+7. 如右下角出现 ``Sentry`` 的图标，即表示导入成功
 
 例程
 ----
