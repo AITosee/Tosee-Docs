@@ -631,13 +631,13 @@ ID:8 20类物体识别-20Class
     1                    Airplane            飞机                2                   Bicycle             自行车
     3                    Bird                鸟                  4                   Boat                船
     5                    Bottle              瓶子                6                   Bus                 公交车
-    7                    Car                 小汽车              8                    Cat                猫
+    7                    Car                 汽车                8                    Cat                猫
     9                    Chair               椅子                10                  Cow                 牛
     11                   DiningTable         餐桌                12                  Dog                 狗
     13                   Horse               马                  14                  Motorbike           摩托车
     15                   Person              人                  16                  PottedPlant         盆栽植物
     17                   Sheep               羊                  18                  Sofa                沙发
-    19                   Train               火车                20                  Tvmonitor           电视  
+    19                   Train               火车                20                  Tvmonitor           显示器  
     ================    ================    ================    ================    ================    ================
 
 * 配置参数
