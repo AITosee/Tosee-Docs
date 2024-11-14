@@ -92,14 +92,6 @@ Sentry2MV 开发文档
 
     Sentry2MV/index.rst
 
-示例程序
-------------------------
-
-.. toctree::
-    :maxdepth: 2
-
-    Demo/index
-
 固件升级
 ------------------------
 
