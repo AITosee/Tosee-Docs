@@ -597,7 +597,7 @@ SentryMV 为了方便用户调用自训练的算法模型，在 sentry.py 中提
     def irq_left_key(pin_num):
         led.set_led(0,(0,0,0))
         led.set_led(1,(0,10,0))
-    led.display()
+         led.display()
 
     uart = sentry.UART(115200) # 初始化PH2.0的串口
     led = sentry.Led() # 初始化2颗RGB LED
