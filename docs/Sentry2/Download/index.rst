@@ -38,7 +38,7 @@ Sentry2标准固件
 ================    ================    ================    ================
 版本                 日期                 说明                链接
 ================    ================    ================    ================
-V2.4.3               2024.11.14          企业版（最新）         :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_4_3_20241114_enterprise_e.kfpkg>`
+V2.4.7               2025.02.05          企业版（最新）         :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_4_7_20250205_enterprise_e.kfpkg>`
 V2.3.1               2024.03.27          企业版               :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_3_1_20240327_enterprise_e.kfpkg>`
 V2.2.9               2023.07.11          企业版               :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_2_9_20230711_enterprise_e.kfpkg>`
 V2.2.3               2022.11.06          企业版               :download:`点击下载 <../Download/firmware/enterprise/vs_main_sentry_k210_v2_2_3_20221106_e.kfpkg>`
@@ -51,7 +51,7 @@ V2.2.1               2022.07.20          企业版               :download:`点�
 ================    ================    ================    ================
 版本                 日期                 说明                链接
 ================    ================    ================    ================
-V2.4.3               2024.11.14          消费版（最新）         :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_4_3_20241114_consumer_e.kfpkg>`
+V2.4.7               2025.02.05          消费版（最新）         :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_4_7_20250205_consumer_e.kfpkg>`
 V2.3.1               2024.03.27          消费版               :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_3_1_20240327_consumer_e.kfpkg>`
 V2.2.9               2023.07.11          消费版               :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_2_9_20230711_consumer_e.kfpkg>`
 V2.2.3               2022.11.06          消费版               :download:`点击下载 <../Download/firmware/consumer/vs_main_sentry_k210_v2_2_3_20221106_consumer_e.kfpkg>`
@@ -77,7 +77,7 @@ Sentry2MV 固件
 ================    ================    ================    ================
 版本                 日期                 说明                链接
 ================    ================    ================    ================
-V1.0.2               2024.11.14          企业版               :download:`点击下载 <../Download/firmware/enterprise/vs_sentry2mv_k210_v1_0_2_20241114_enterprise_e.kfpkg>`
+V1.0.4               2025.02.21          企业版               :download:`点击下载 <../Download/firmware/enterprise/vs_sentry2mv_k210_v1_0_4_20250221_enterprise_e.kfpkg>`
 ================    ================    ================    ================
 
 消费版MV固件(字母标识C)
@@ -86,7 +86,7 @@ V1.0.2               2024.11.14          企业版               :download:`点�
 ================    ================    ================    ================
 版本                 日期                 说明                链接
 ================    ================    ================    ================
-V1.0.2               2024.11.14          消费版               :download:`点击下载 <../Download/firmware/consumer/vs_sentry2mv_k210_v1_0_2_20241114_consumer_e.kfpkg>`
+V1.0.4               2025.02.21          消费版               :download:`点击下载 <../Download/firmware/consumer/vs_sentry2mv_k210_v1_0_4_20250221_consumer_e.kfpkg>`
 ================    ================    ================    ================
 
 
@@ -98,7 +98,7 @@ V1.0.2               2024.11.14          消费版               :download:`点�
 ========================================    ================    ================================================================    ================================
 名称                                         版本                 说明                                                                 链接
 ========================================    ================    ================================================================    ================================
-固件更新说明                                   V2.4.3              固件更新内容的介绍说明                                                 :download:`点击下载 <../Download/docs/Sentry2更新说明_v2.4.3_2024.11.14.pdf>`
+固件更新说明                                   V2.4.7              固件更新内容的介绍说明                                                 :download:`点击下载 <../Download/docs/Sentry2更新说明_v2.4.7_2025.02.05.pdf>`
 固件更新操作手册                                V1.3                固件更新操作方法指导                                                   :download:`点击下载 <../Download/docs/固件更新操作手册V1.3.pdf>`
 WiFi固件开发环境搭建与烧录指导手册                V1.0                板载ESP8285 WiFi芯片Arduino开发环境搭建与固件烧录指导                    :download:`点击下载 <../Download/docs/Sentry2 WiFi固件开发环境搭建与烧录指导手册_V1.0.pdf>`
 SentryMV使用手册                               V1.1                SentryMV固件的使用手册                                               :download:`点击下载 <../Download/docs/SentryMV使用手册_v1.1.pdf>`
