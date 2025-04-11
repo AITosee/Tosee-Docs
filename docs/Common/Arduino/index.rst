@@ -321,18 +321,6 @@ API 说明
         .. cpp:enumerator:: kZoom4
         .. cpp:enumerator:: kZoom5
 
-.. cpp:enum:: sentry_camera_fps_e
-
-    摄像头帧率
-
-        .. cpp:enumerator:: kFPSNormal
-
-            摄像头普通帧率（约 25 fps）
-
-        .. cpp:enumerator:: kFPSHigh
-
-            摄像高帧率模式（约 50 fps）
-
 .. cpp:enum:: sentry_camera_white_balance_e
 
     摄像头白平衡模式
@@ -353,18 +341,6 @@ API 说明
 
             摄像头黄光模式
 
-.. cpp:enum:: sentry_baudrate_e
-
-    串口波特率
-
-        .. cpp:enumerator:: kBaud9600
-        .. cpp:enumerator:: kBaud19200
-        .. cpp:enumerator:: kBaud38400
-        .. cpp:enumerator:: kBaud57600
-        .. cpp:enumerator:: kBaud115200
-        .. cpp:enumerator:: kBaud921600
-        .. cpp:enumerator:: kBaud1152000
-        .. cpp:enumerator:: kBaud2000000
 
 .. cpp:class:: Sentry2
 
@@ -487,32 +463,11 @@ API 说明
         :param zoom: 缩放等级
         :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
 
-    .. cpp:function:: uint8_t CameraSetRotate(bool enable)
-
-        设置摄像头图像旋转
-
-        :param enable: ``true``：图像旋转 180°
-        :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
-
-    .. cpp:function:: uint8_t CameraSetFPS(sentry_camera_fps_e fps)
-
-        设置摄像头帧率
-
-        :param fps: 摄像头帧率
-        :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
-
     .. cpp:function:: uint8_t CameraSetAwb(sentry_camera_white_balance_e awb)
 
         设置摄像头白平衡
 
         :param awb: 摄像头白平衡模型
-        :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
-
-    .. cpp:function:: uint8_t UartSetBaudrate(sentry_baudrate_e baud)
-
-        设置串口波特率
-
-        :param baud: 串口波特率
         :return: 错误码，返回 ``SENTRY_OK``，则设置成功，其他，则设置失败
 
     .. cpp:function:: int rows()
