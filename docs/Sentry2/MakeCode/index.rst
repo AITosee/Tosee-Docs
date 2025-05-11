@@ -9,15 +9,15 @@ Sentry2-MakeCode 开发文档
 安装
 ----
 
-1.打开打开 `MakeCode 在线编程界面 <https://makecode.microbit.org/>`_。
-2.新建工程
-3.点击 ``扩展`` 按钮，在搜索栏输入 ``https://github.com/AITosee/pxt-sentry2``
+1. 打开打开 `MakeCode 在线编程界面 <https://makecode.microbit.org/>`_。
+2. 新建工程
+3. 点击 ``扩展`` 按钮，在搜索栏输入 ``https://github.com/AITosee/pxt-sentry2``
 
     .. tip::
 
         旧版扩展库链接为 ``https://github.com/AITosee/pxt-sentry``
 
-4.点击搜索出来的库添加，即可完成库的加载
+4. 点击搜索出来的库添加，即可完成库的加载
 
 例程
 ----
