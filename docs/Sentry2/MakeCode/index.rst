@@ -1,7 +1,7 @@
 .. _chapter_makecode_index:
 
-Sentry-MakeCode 开发文档
-========================
+Sentry2-MakeCode 开发文档
+=========================
 
 `pxt-sentry <https://github.com/AITosee/pxt-sentry>`_ 为适配 ``microbit&MakeCode`` 开发的驱动库，
 适用于 ``microbit`` 在 `MakeCode <https://makecode.microbit.org/>`_ 上的 ``图形化`` 开发。
@@ -9,21 +9,22 @@ Sentry-MakeCode 开发文档
 安装
 ----
 
-1. 打开 `MakeCode 在线编程界面 <https://makecode.microbit.org/>`_。
-2. 新建工程。
-3. 依次点击 ``高级→扩展``，在搜索栏输入 ``https://github.com/AITosee/pxt-sentry``。
+1.打开打开 `MakeCode 在线编程界面 <https://makecode.microbit.org/>`_。
+2.新建工程
+3.点击 ``扩展`` 按钮，在搜索栏输入 ``https://github.com/AITosee/pxt-sentry2``
 
     .. tip::
 
-        由于 micro:bit 程序空间有限，建议采用 I2C 通讯模式，导入下方专用库（仅支持 I2C 通讯，体积小）：
-        ``https://github.com/AITosee/pxt-sentry2-i2c``
+        旧版扩展库链接为 ``https://github.com/AITosee/pxt-sentry``
 
-4. 点击搜索出来的库添加，即可完成库的加载。
+4.点击搜索出来的库添加，即可完成库的加载
 
 例程
 ----
 
-详见： `使用方法 <https://github.com/AITosee/pxt-sentry#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95>`_
+请从 `网盘 <https://pan.baidu.com/s/1Ur39pkhnL8yznRqGbX2tkA?pwd=1022>`_ 下载例程
+
+路径：资料下载->视觉传感器->Sentry2->出厂固件->应用例程
 
 模块简介
 --------

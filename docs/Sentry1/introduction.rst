@@ -19,7 +19,7 @@ Sentry1
 
     Vision/index
 
-Sentry-Arduino 开发文档
+Sentry1-Arduino 开发文档
 ------------------------
 
 .. toctree::
@@ -27,7 +27,7 @@ Sentry-Arduino 开发文档
 
     ../Common/Arduino/index
 
-Sentry-Mixly 开发文档
+Sentry1-Mixly 开发文档
 ------------------------
 
 .. toctree::
@@ -35,7 +35,7 @@ Sentry-Mixly 开发文档
 
     Mixly/index
 
-Sentry-Mind+ 开发文档
+Sentry1-Mind+ 开发文档
 ------------------------
 
 .. toctree::
@@ -43,29 +43,29 @@ Sentry-Mind+ 开发文档
 
     MindPlus/index
 
-Sentry-MakeCode 开发文档
-------------------------
+Sentry1-MakeCode 开发文档
+-------------------------
 
 .. toctree::
     :maxdepth: 2
 
     MakeCode/index
 
-Sentry-microPython 开发文档
----------------------------
+.. Sentry-microPython 开发文档
+.. ---------------------------
 
-.. toctree::
-    :maxdepth: 2
+.. .. toctree::
+..     :maxdepth: 2
 
-    microPython/index
+..     microPython/index
 
-Sentry-mPython 开发文档
----------------------------
+.. Sentry-mPython 开发文档
+.. ---------------------------
 
-.. toctree::
-    :maxdepth: 2
+.. .. toctree::
+..     :maxdepth: 2
 
-    ../Common/mPython/index
+..     ../Common/mPython/index
 
 
 固件升级

@@ -1,43 +1,29 @@
 .. _chapter_mindplus_index:
 
-Sentry-Mind+ 开发文档
-======================
+Sentry2-Mind+ 开发文档
+=======================
 
 `Sentry2-MindPlus <https://github.com/AITosee/Sentry2-MindPlus>`_ 为适配 `Mind+ <http://mindplus.cc/>`_ 开发的驱动库，
-适用于 ``掌控版/microbit`` 在 Mind+ 上的 ``图形化`` 及 ``microPython`` 两大编程语言的开发。
+支持 micro:bit、Arduino 系列与掌控板基于C语言的图形化代码编程以及掌控板基于microPython语言的图形化代码编程。
 
 安装
 ----
 
-1. 下载对应平台的 `Mind+软件 <http://mindplus.cc/download.html>`_。
-2. 打开 Mind+，新建项目后选择 ``上传模式``。
-3. 点击右下角齿轮图标，并点击 ``用户库``。
-4. 在搜索栏输入 ``https://github.com/AITosee/Sentry2-MindPlus``，并点击添加。
+1. 下载对应平台的 `Mind+软件 <http://mindplus.cc/download.html>`_
+2. 打开Mind+，新建项目后选择 ``上传模式``
+3. 点击左下角的扩展按钮，选择需要使用的主控板，然后点击 ``用户库``
+4. 在搜索栏输入 ``https://github.com/AITosee/Sentry2-MindPlus``，并点击添加
+
+.. note::
+    如需添加 v1.1.5 旧版本库，请下载旧版本库：https://github.com/AITosee/Sentry2-MindPlus/archive/refs/tags/v1.1.5.zip
+    并使用本地导入该库。
 
 例程
 ----
 
-1. 20类物体识别
+请从 `网盘 <https://pan.baidu.com/s/1Ur39pkhnL8yznRqGbX2tkA?pwd=1022>`_ 下载例程
 
-    .. image:: images/mindplus_sentry_example_20class.png
-
-2. 颜色识别
-
-    .. image:: images/mindplus_sentry_example_color.png
-
-3. 人脸识别
-
-    .. image:: images/mindplus_sentry_example_face.png
-
-4. 色块检测
-
-    .. image:: images/mindplus_sentry_example_blob.png
-
-5. 深度学习
-
-    .. image:: images/mindplus_sentry_example_learning.png
-
-    .. attention:: 使用前需在 Sentry2 上提前学习好对应的物体
+路径：资料下载->视觉传感器->Sentry2->出厂固件->应用例程
 
 模块说明
 --------

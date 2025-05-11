@@ -1,7 +1,7 @@
 .. _chapter_micropython_index:
 
-Sentry-microPython 开发教程
-===========================
+Sentry2-microPython 开发教程
+============================
 
 `Sentry-microPython <https://github.com/AITosee/Sentry-microPython>`_ 为
 掌控版适配的 python 库，可通过该库去驱动 Sentry 系列传感器。

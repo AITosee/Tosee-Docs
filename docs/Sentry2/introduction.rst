@@ -44,7 +44,7 @@ Sentry-Arduino 开发文档
 
     ../Common/Arduino/index
 
-Sentry-Mixly 开发文档
+Sentry2-Mixly 开发文档
 ------------------------
 
 .. toctree::
@@ -52,7 +52,7 @@ Sentry-Mixly 开发文档
 
     Mixly/index
 
-Sentry-Mind+ 开发文档
+Sentry2-Mind+ 开发文档
 ------------------------
 
 .. toctree::
@@ -60,29 +60,37 @@ Sentry-Mind+ 开发文档
 
     MindPlus/index
 
-Sentry-MakeCode 开发文档
-------------------------
+Sentry2-MakeCode 开发文档
+-------------------------
 
 .. toctree::
     :maxdepth: 2
 
     MakeCode/index
 
-Sentry-microPython 开发文档
----------------------------
+Sentry2-microPython 开发文档
+----------------------------
 
 .. toctree::
     :maxdepth: 2
 
     microPython/index
 
-Sentry-mPythonX 开发文档
+Sentry2-mPythonX 开发文档
 ---------------------------
 
 .. toctree::
     :maxdepth: 2
 
     ../Common/mPython/index
+
+Sentry2-OHCode V2开发文档
+-------------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    OHCodeV2/index.rst
 
 Sentry2MV 开发文档
 ---------------------------

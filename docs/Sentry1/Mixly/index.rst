@@ -1,24 +1,23 @@
 .. _chapter_vs1_mixly_index:
 
-Sentry-Mixly 开发文档
-=====================
+Sentry1-Mixly 开发文档
+======================
 
 Sentry-Mixly 库是一个专门为 Mixly 图形化编程打造的驱动库，适用于 Sentry 系列产品。
 
-开发环境安装
-------------
+安装
+----
 
-1. 根据系统下载对应 `下载并安装Mixly2.0RC4，注意安装路径不要存在中文 <https://pan.baidu.com/s/1Ur39pkhnL8yznRqGbX2tkA?pwd=1022>`_
-2. 下载 `Sentry-Mixly <https://github.com/AITosee/Sentry-Mixly/releases/latest>`_ ``.zip`` 库
-3. 将步骤 2 中的 ``.zip`` 库解压
-4. 打开 Mixly，点击 ``导入库 > 本地导入``
-5. 删除步骤3中解压文件夹下的 ``Sentry.xml`` 文件，然后选择 ``Sentry_rc4.xml`` 加载库
+1. `下载 <https://mixly.cn/explore/software并安装Mixly>`_，建议安装路径不要存在中文
+2. 根据Mixly的版本号 `下载 <https://github.com/AITosee/Sentry-Mixly/releases>`_ 对应的Sentry的驱动库
 
    .. attention::
+        - Sentry-Mixly-v2.x.x.zip                 适用于Mixly3.0以及Mixly2.0rc4
+        - Sentry-Mixly-v2.x.x_mixly2.0rc3.zip     适用于Mixly2.0rc3
+        - Sentry-Mixly-v2.x.x_mixly1.x.zip        适用于Mixly1.x
 
-       如果Mixly的版本为2.0RC3或更早的，请 **删除** ``Sentry_rc4.xml``，然后 **选择** ``Sentry.xml`` 加载库
-
-6. 如右下角出现 ``Sentry`` 的图标，即表示导入成功
+3. 打开Mixly，点击右上角 设置->管理库->导入库->本地导入，选择下载的驱动库压缩包
+4. 左侧菜单栏出现Sentry视觉传感器，并且代码块均正常显示，则导入成功
 
 例程
 ----
