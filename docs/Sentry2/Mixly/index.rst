@@ -8,7 +8,7 @@ Sentry-Mixly 库是一个专门为 Mixly 图形化编程打造的驱动库，适
 安装
 ----
 
-1. `下载 <https://mixly.cn/explore/software并安装Mixly>`_，建议安装路径不要存在中文
+1. `下载 <https://mixly.cn/explore/software>`_ 并安装Mixly，建议安装路径不要存在中文
 2. 根据Mixly的版本号 `下载 <https://github.com/AITosee/Sentry-Mixly/releases>`_ 对应的Sentry的驱动库
 
    .. attention::
