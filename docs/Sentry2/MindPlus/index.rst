@@ -15,8 +15,8 @@ Sentry2-Mind+ 开发文档
 4. 在搜索栏输入 ``https://github.com/AITosee/Sentry2-MindPlus``，并点击添加
 
 .. note::
-    如需添加 v1.1.5 旧版本库，请下载旧版本库：https://github.com/AITosee/Sentry2-MindPlus/archive/refs/tags/v1.1.5.zip
-    并使用本地导入该库。
+    如需旧版V1.1.5库，可以下载（超链接 https://github.com/AlTosee/Sentry2-MindPlus/archive/refs/tags/v1.1.5.zip ）
+    后通过 ``导入用户库`` 继续使用
 
 例程
 ----
