@@ -25,7 +25,7 @@ Sentry2-Mind+ 开发文档
 
 路径：资料下载->视觉传感器->Sentry2->出厂固件->例程
 
-模块说明
+模块介绍
 --------
 
 :ref:`点击查看 <sentry2_mixly_block_introduce>`
