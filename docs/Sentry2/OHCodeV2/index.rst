@@ -17,4 +17,9 @@ Sentry2-OHCode为适配源师兄板 + OHCode V2编译软件所开发的驱动库
 
 请从 `网盘 <https://pan.baidu.com/s/1Ur39pkhnL8yznRqGbX2tkA?pwd=1022>`_ 下载例程
 
-路径：资料下载->视觉传感器->Sentry2->出厂固件->应用例程
+路径：资料下载->视觉传感器->Sentry2->出厂固件->例程
+
+模块介绍
+--------
+
+:ref:`点击查看 <sentry2_mixly_block_introduce>`

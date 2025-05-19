@@ -24,71 +24,73 @@ Sentry2-MakeCode 开发文档
 
 请从 `网盘 <https://pan.baidu.com/s/1Ur39pkhnL8yznRqGbX2tkA?pwd=1022>`_ 下载例程
 
-路径：资料下载->视觉传感器->Sentry2->出厂固件->应用例程
+路径：资料下载->视觉传感器->Sentry2->出厂固件->例程
 
-模块简介
+模块介绍
 --------
 
-1. 初始化模块
+:ref:`点击查看 <sentry2_mixly_block_introduce>`
 
-    选择一个端口初始化 Sentry，该方法必须在使用其他 Sentry 相关模块之前调用。
+.. 1. 初始化模块
 
-    .. image:: images/makecode_sentry_init.png
+..     选择一个端口初始化 Sentry，该方法必须在使用其他 Sentry 相关模块之前调用。
 
-2. 开启/关闭算法
+..     .. image:: images/makecode_sentry_init.png
 
-    开启或关闭某个算法。
+.. 2. 开启/关闭算法
 
-    .. image:: images/makecode_sentry_set_vision_status.png
+..     开启或关闭某个算法。
 
-3. 设置返回结果坐标格式
+..     .. image:: images/makecode_sentry_set_vision_status.png
 
-    可选择返回坐标为 ``绝对坐标（0~长/宽）`` 或 ``相对坐标（0~100）``。
+.. 3. 设置返回结果坐标格式
 
-    .. image:: images/makecode_sentry_set_coordinate_type.png
+..     可选择返回坐标为 ``绝对坐标（0~长/宽）`` 或 ``相对坐标（0~100）``。
 
-4. 获取算法检测结果的数量
+..     .. image:: images/makecode_sentry_set_coordinate_type.png
 
-    .. image:: images/makecode_sentry_get_result_num.png
+.. 4. 获取算法检测结果的数量
 
-5. 获取算法检测结果
+..     .. image:: images/makecode_sentry_get_result_num.png
 
-    获取算法检测结果的具体数值，多个结果可通过设置第三个参数 ``索引N`` 来获取不同结果的值。
+.. 5. 获取算法检测结果
 
-    .. image:: images/makecode_sentry_get_value.png
+..     获取算法检测结果的具体数值，多个结果可通过设置第三个参数 ``索引N`` 来获取不同结果的值。
 
-6. 获取二维码算法识别结果
+..     .. image:: images/makecode_sentry_get_value.png
 
-    返回二维码识别字符串。
+.. 6. 获取二维码算法识别结果
 
-    .. image:: images/makecode_sentry_get_qrcode_value.png
+..     返回二维码识别字符串。
 
-7. 判断算法结果标签
+..     .. image:: images/makecode_sentry_get_qrcode_value.png
 
-    判断算法第N个结果是否为某标签，返回 ``是`` 或 ``否``。
+.. 7. 判断算法结果标签
 
-    .. image:: images/makecode_sentry_is_label.png
+..     判断算法第N个结果是否为某标签，返回 ``是`` 或 ``否``。
 
-8. 获取颜色识别算法识别结果
+..     .. image:: images/makecode_sentry_is_label.png
 
-    获取识别到颜色的 RGB 值。
+.. 8. 获取颜色识别算法识别结果
 
-    .. image:: images/makecode_sentry_get_color.png
+..     获取识别到颜色的 RGB 值。
 
-9. 设置摄像头白平衡
+..     .. image:: images/makecode_sentry_get_color.png
 
-    某些特殊场景下可固定摄像头白平衡。
+.. 9. 设置摄像头白平衡
 
-    .. image:: images/makecode_sentry_set_camera_awb.png
+..     某些特殊场景下可固定摄像头白平衡。
 
-10. 设置颜色识别算法参数
+..     .. image:: images/makecode_sentry_set_camera_awb.png
 
-        设置颜色识别算法需要识别的位置及大小。
+.. 10. 设置颜色识别算法参数
 
-        .. image:: images/makecode_sentry_set_color_param.png
+..         设置颜色识别算法需要识别的位置及大小。
 
-11. 设置色块检测算法参数
+..         .. image:: images/makecode_sentry_set_color_param.png
 
-        设置色块检测算法的最小识别大小。
+.. 11. 设置色块检测算法参数
 
-        .. image:: images/makecode_sentry_set_blob_param.png
+..         设置色块检测算法的最小识别大小。
+
+..         .. image:: images/makecode_sentry_set_blob_param.png

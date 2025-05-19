@@ -1,6 +1,6 @@
 .. _chapter_vs1_download_index:
 
-资源下载 
+资源下载
 ================
 
 简介
@@ -13,16 +13,16 @@ Sentry1相关的资源下载
 Sentry1驱动库
 ----------------
 
-================    ================================    ================================    ================================================   
-开发平台              编程语言                             主控设备                             驱动库链接                                             
-================    ================================    ================================    ================================================    
-Arduino             C/C++                                Arduino                            https://github.com/AITosee/Sentry-Arduino/releases 或 :download:`本地下载 <../Download/libs/Sentry-Arduino-1.3.6.zip>`
-MakeCode            图形化                               Micro:bit                           https://github.com/AITosee/pxt-sentry/releases
-Mind+               图形化，C/C++，MicroPython            Arduino、Micro:bit、掌控板            https://github.com/AITosee/ext-sentry/releases
-Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly/releases 或 :download:`本地下载 <../Download/libs/Sentry-Mixly-v1.3.11.zip>`
-BXY                 MicroPython                          Micro:bit、掌控板                    https://github.com/AITosee/Sentry-microPython/releases 或 :download:`本地下载 <../Download/libs/Sentry-microPython-1.2.2.zip>`
+================    ================================    ================================    ================================================
+开发平台              编程语言                             主控设备                             驱动库链接
+================    ================================    ================================    ================================================
+Arduino             C/C++                                Arduino                            https://github.com/AITosee/Sentry-Arduino/releases
+MakeCode            图形化                               Micro:bit                          https://github.com/AITosee/pxt-Sentry1
+Mind+               图形化，C/C++，MicroPython            Arduino、Micro:bit、掌控板        https://github.com/AITosee/Sentry1-MindPlus
+Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly/releases
+BXY                 MicroPython                          Micro:bit、掌控板                    https://github.com/AITosee/Sentry-microPython/releases
 ARM PC              C/C++                               树莓派、Linux                         :download:`Sentry-Arduino-1.3.3_for_linux.zip <../Download/libs/Sentry-Arduino-1.3.3_for_linux.zip>`
-================    ================================    ================================    ================================================ 
+================    ================================    ================================    ================================================
 
 
 .. _chapter_download_firmware_index:
@@ -32,23 +32,23 @@ Sentry1固件
 
 :download:`进入百度网盘 < https://pan.baidu.com/s/13j4z5QLlk_XskL-F-pecWw?pwd=dtav>` **提取码 dtav**
 
-企业版固件
+固件1
 ************************
 
-================    ================    ================    ================
-版本                 日期                 说明                链接
-================    ================    ================    ================
-V1.2.10              2023.06.12          企业版               :download:`点击下载 <../Download/firmware/enterprise/sentry_v1_main_v1.2.10_20230612_0x10000_enterprise_e.bin>`
-================    ================    ================    ================
+================    ================    ===================     ================
+版本                 日期                 说明                    链接
+================    ================    ===================     ================
+V1.3.4              2025.01.16          新款30W像素镜头专用     :download:`点击下载 <../Download/firmware/vs_sentry1_main_v1.3.4_20250116_e.bin>`
+================    ================    ===================     ================
 
-消费版固件
+固件2
 ************************
 
-================    ================    ================    ================
-版本                 日期                 说明                链接
-================    ================    ================    ================
-V1.2.10              2023.06.12          消费版              :download:`点击下载 <../Download/firmware/consumer/sentry_v1_main_v1.2.10_20230612_0x10000_consumer_e.bin>`
-================    ================    ================    ================
+================    ================    ====================    ================
+版本                 日期                 说明                    链接
+================    ================    ====================    ================
+V1.2.10              2023.06.12         旧款200W像素镜头专用    :download:`点击下载 <../Download/firmware/consumer/sentry_v1_main_v1.2.10_20230612_0x10000_consumer_e.bin>`
+================    ================    ====================    ================
 
 .. _chapter_download_docs_index:
 

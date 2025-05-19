@@ -19,7 +19,7 @@ Sentry1
 
     Vision/index
 
-Sentry1-Arduino 开发文档
+Sentry-Arduino 开发文档
 ------------------------
 
 .. toctree::
