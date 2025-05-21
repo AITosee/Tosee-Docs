@@ -1,6 +1,6 @@
 .. _chapter_download_index:
 
-资源下载 
+资源下载
 ================
 
 简介
@@ -13,16 +13,16 @@ Sentry2相关的资源下载
 Sentry2驱动库
 ----------------
 
-================    ================================    ================================    ================================================   
-开发平台              编程语言                             主控设备                             驱动库链接                                             
-================    ================================    ================================    ================================================    
-Arduino             C/C++                                Arduino                            https://github.com/AITosee/Sentry-Arduino/releases 或 :download:`本地下载 <../Download/libs/Sentry-Arduino-1.3.6.zip>`
+================    ================================    ================================    ================================================
+开发平台              编程语言                             主控设备                             驱动库链接
+================    ================================    ================================    ================================================
+Arduino             C/C++                                Arduino                            https://github.com/AITosee/Sentry-Arduino/releases
 MakeCode            图形化                               Micro:bit                           https://github.com/AITosee/pxt-sentry/releases
 Mind+               图形化，C/C++，MicroPython            Arduino、Micro:bit、掌控板            https://github.com/AITosee/ext-sentry/releases
-Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly/releases 或 :download:`本地下载 <../Download/libs/Sentry-Mixly-v1.3.11.zip>`
-BXY                 MicroPython                          Micro:bit、掌控板                    https://github.com/AITosee/Sentry-microPython/releases 或 :download:`本地下载 <../Download/libs/Sentry-microPython-1.2.2.zip>`
+Mixly               图形化                                Arduino                             https://github.com/AITosee/Sentry-Mixly/releases
+BXY                 MicroPython                          Micro:bit、掌控板                    https://github.com/AITosee/Sentry-microPython/releases
 ARM PC              C/C++                               树莓派、Linux                         :download:`Sentry-Arduino-1.3.3_for_linux.zip <../Download/libs/Sentry-Arduino-1.3.3_for_linux.zip>`
-================    ================================    ================================    ================================================ 
+================    ================================    ================================    ================================================
 
 
 .. _chapter_download_firmware_index:
