@@ -1,26 +1,29 @@
 Sentry2MV 开发文档
 ==================
 
-`Sentry2MV（Sentry2 Micropython Vision） <https://github.com/AITosee/Sentry2MV>`_
-模式基于嘉楠科技 CanMV 开源固件而开发，该模式采用 MicroPython 编程语言对硬件进行编程和交互。
+SentryMV（Sentry Micropython Vision）模式通过 MicroPython 编程语言对硬件进行编程，简称MV模式。
 MicroPython 是业内十分知名的低资源需求 Python 脚本解释器，直接运行于嵌入式处理器内，
 仅需通过串口向硬件设备传输 Python 脚本即可实现对其控制和逻辑处理，如读取摄像头，运行算法，
-输出数据等，无需固件编译，简单易用。CanMV IDE 是嘉楠科技提供的一款可视化的开发环境软件，用于编写 MicroPython
-程序，还可以进行上传代码，打印调试日志等操作，软件内置大量的开源示例程序可供用户
-学习和使用。SentryMV 模式同样可以通过该软件进行开发，并运行里面的开源程序。
+输出数据等，无需固件编译，简单易用。
+
+Sentry2MV 是专为Sentry2视觉传感提供的可运行MV模式的固件，基于嘉楠科技 CanMV 开源固件而开发。
+固件兼容 CanMV IDE 的接入和使用，CanMV是嘉楠科技提供的一款可视化的开发环境软件，用于编写 MicroPython
+程序，代码上传，打印日志等操作，软件内置丰富的开源示例程序可供用户学习和使用。
 
 基础接口可参考 `CanMV 官方文档 <https://developer.canaan-creative.com/canmv/main/canmv/index.html>`_ 。
 
-SentryMV 固件下载与升级
+Sentry2MV 固件下载与升级
 +++++++++++++++++++++++
 
-Sentry2 视觉传感器使用 SentryMV 模式需要烧录 sentry2mv 的固件，该固件做了相
-应的硬件适配，对模型算法也做了函数优化处理，调用更简单易懂。
+Sentry2 视觉传感器使用 SentryMV 模式需要烧录专用的固件，该固件根据Sentry2产品做了相
+应的硬件适配，对CanMV中的模型算法也做了函数优化处理，调用更简单易懂。
 
 固件下载
 --------
 
-目前 SentryMV 固件属于内测阶段，可通过瞳芯智能网盘下载 `点击此处进入网盘 <https://pan.baidu.com/s/1Ur39pkhnL8yznRqGbX2tkA?pwd=1022>`_
+在线下载：:ref:`Sentry2MV固件<chapter_download_firmware_sentry2mv_index>`   
+
+网盘下载 `点击此处进入网盘 <https://pan.baidu.com/s/1Ur39pkhnL8yznRqGbX2tkA?pwd=1022>`_
 或打开网盘地址(提取码：1022)：https://pan.baidu.com/s/1Ur39pkhnL8yznRqGbX2tkA?pwd=1022
 
 网盘位置 ``资料下载/视觉传感器/Sentry2/Sentry2MV固件``， 下载相应的 sentry2mv 固件，分为消费版和企业版固件
@@ -28,10 +31,12 @@ Sentry2 视觉传感器使用 SentryMV 模式需要烧录 sentry2mv 的固件，
 - 企业版：vs_sentry2mv_k210_vX_X_X_XXXXXXXX_enterprise_e.kfpkg
 - 消费版：vs_sentry2mv_k210_vX_X_X_XXXXXXXX_consumer_e.kfpkg
 
+*提示：SentryMV是一系列 MV 模式的总称，Sentry2MV 是专为Sentry2产品开发的运行MV模式的专用固件，不适用于其他Sentry系列的产品*
+
 *提示：上电后查看 Sentry2 屏幕运行界面右下方的字母标识，显示字母“E”或“S”则为企业版，字
 母“C”则为消费版*
 
-*注意：使用 sentry2mv 固件后，Sentry2 的标准固件功能将无法使用，如果要切换回标准模式，需
+*注意：使用 Sentry2MV 固件后，Sentry2 的标准固件功能将无法使用，如果要切换回标准模式，需
 要重新烧录标准版的固件。*
 
 固件升级
@@ -112,7 +117,7 @@ SentryMV 运行神经网络类型的算法，首先需要将算法模型按照�
    /KPU/yolo_face_detect/face_detect_320x240.kmodel
 5. 拆开 Sentry2 的外壳，并将 TF 插入卡座中，TF 卡的金手指朝下。
 
-*提示：即将推出可外接 TF 卡的 Sentry2 外壳，可免去拆除外壳的步骤*
+*提示：新推出可外接 TF 卡的 Sentry2 外壳，可免去拆除外壳的步骤*
 
 .. image:: images/sentry2mv_insert_TF_card.png
 
@@ -150,7 +155,7 @@ CanMV IDE 内置丰富的示例程序，包括对硬件接口的操作、对图�
 sentry.py 函数库
 ----------------
 
-SentryMV 固件内置了 sentry.py 函数库，提供了几个常用的函数，并对部分 KPU 神
+Sentry2MV 固件内置了 sentry.py 函数库，提供了几个常用的函数，并对部分 KPU 神
 经网络类型的算法采用了统一的函数接口，相比于自带的示例程序而言，代码变的更简洁明
 了，易于理解，从而可以更好的专注于应用程序的开发。
 
