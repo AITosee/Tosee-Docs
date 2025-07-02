@@ -1,7 +1,7 @@
 .. _chapter_vs1_mindplus_index:
 
 Sentry1-Mind+ 开发文档
-=====================
+======================
 
 `Sentry1-MindPlus <https://github.com/AITosee/Sentry1-MindPlus>`_ 为适配 `Mind+ <http://mindplus.cc/>`_ 开发的驱动库，
 适用于 ``掌控版/microbit`` 在 Mind+ 上的 ``图形化`` 及 ``microPython`` 两大编程语言的开发。

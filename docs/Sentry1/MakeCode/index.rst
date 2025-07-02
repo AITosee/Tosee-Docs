@@ -1,7 +1,7 @@
 .. _chapter_vs1_makecode_index:
 
 Sentry1-MakeCode 开发文档
-========================
+=========================
 
 `pxt-Sentry1 <https://github.com/AITosee/pxt-Sentry1>`_ 为适配 ``microbit&MakeCode`` 开发的驱动库，
 适用于 ``microbit`` 在 `MakeCode <https://makecode.microbit.org/>`_ 上的 ``图形化`` 开发。
